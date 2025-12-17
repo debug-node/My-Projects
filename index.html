@@ -1,117 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>My Projects Portfolio</title>
+  <title>Aditya | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      height: 100vh;
-    }
+  <meta name="description" content="Aditya Kumar | Frontend Developer Portfolio">
+  <meta name="author" content="Aditya Kumar">
 
-    .sidebar {
-      width: 300px;
-      overflow-y: auto;
-      background: #111;
-      color: #fff;
-      padding: 15px;
-    }
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    .sidebar h2 {
-      margin-top: 20px;
-      font-size: 18px;
-      border-bottom: 1px solid #444;
-      padding-bottom: 5px;
-    }
-
-    .sidebar a {
-      display: block;
-      padding: 6px 0;
-      color: #00c3ff;
-      text-decoration: none;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .sidebar a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    .viewer {
-      flex: 1;
-      border: none;
-    }
-
-    .empty {
-      color: #aaa;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- LEFT MENU -->
-  <div class="sidebar">
+  <header class="hero">
+    <h1>👋 Hi, I'm Aditya</h1>
+    <p>Frontend Developer | JavaScript | HTML | CSS</p>
 
-    <h1>🚀 My Projects</h1>
+    <div class="hero-btns">
+      <a href="https://github.com/debug-node" target="_blank">GitHub</a>
+      <a href="#projects">View Projects</a>
+    </div>
+  </header>
 
-    <h2>10 Projects</h2>
-    <a onclick="loadProject('10 Project/Age Calculator/index.html')">Age Calculator</a>
-    <a onclick="loadProject('10 Project/BMI Calculator/index.html')">BMI Calculator</a>
-    <a onclick="loadProject('10 Project/Counter Application/index.html')">Counter App</a>
-    <a onclick="loadProject('10 Project/Loan Calculator/index.html')">Loan Calculator</a>
-    <a onclick="loadProject('10 Project/Love Calculator/index.html')">Love Calculator</a>
-    <a onclick="loadProject('10 Project/Palindrome Checker/index.html')">Palindrome Checker</a>
-    <a onclick="loadProject('10 Project/RGB Color Generator/index.html')">RGB Generator</a>
-    <a onclick="loadProject('10 Project/Time and Date Widget/index.html')">Time & Date</a>
-    <a onclick="loadProject('10 Project/Tip Calculator/index.html')">Tip Calculator</a>
-    <a onclick="loadProject('10 Project/Unicode Character/index.html')">Unicode Character</a>
+  <input type="text" id="search" placeholder="🔍 Search categories..." onkeyup="searchProjects()" />
 
-    <h2>20 Basic Projects</h2>
-    <a onclick="loadProject('20 Basic Project/1 Key Code/index.html')">Key Code</a>
-    <a onclick="loadProject('20 Basic Project/2 Drop Animation/index.html')">Drop Animation</a>
-    <a onclick="loadProject('20 Basic Project/3 Name Tag Sticker/index.html')">Name Tag</a>
-    <a onclick="loadProject('20 Basic Project/4 Coin Flip Application/index.html')">Coin Flip</a>
-    <a onclick="loadProject('20 Basic Project/5 Smoke Effect/index.html')">Smoke Effect</a>
-    <a onclick="loadProject('20 Basic Project/6 Timeline Project/index.html')">Timeline</a>
-    <a onclick="loadProject('20 Basic Project/7 Drag and Drop/index.html')">Drag & Drop</a>
-    <a onclick="loadProject('20 Basic Project/8 Temperature Converter/index.html')">Temperature</a>
-    <a onclick="loadProject('20 Basic Project/9 Click to Visible Letters/index.html')">Visible Letters</a>
-    <a onclick="loadProject('20 Basic Project/10 Click to Copy Clipboard/index.html')">Copy Clipboard</a>
+  <section class="container" id="projects">
+    <div class="grid">
 
-    <h2>HTML CSS Projects</h2>
-    <a onclick="loadProject('HTML-CSS-Project/blog/index.html')">Blog</a>
-    <a onclick="loadProject('HTML-CSS-Project/card/index.html')">Card</a>
-    <a onclick="loadProject('HTML-CSS-Project/card2/index.html')">Card 2</a>
-    <a onclick="loadProject('HTML-CSS-Project/media/index.html')">Media</a>
-    <a onclick="loadProject('HTML-CSS-Project/netflix clone/index.html')">Netflix Clone</a>
-    <a onclick="loadProject('HTML-CSS-Project/product/index.html')">Product</a>
-    <a onclick="loadProject('HTML-CSS-Project/reciepi/index.html')">Recipe</a>
-    <a onclick="loadProject('HTML-CSS-Project/Studysync/index.html')">StudySync</a>
+      <div class="card" data-title="10 projects" onclick="go('html/10-projects.html')">
+        <i class="fa-solid fa-folder-open icon"></i>
+        <h4>10 Projects</h4>
+      </div>
 
-    <h2>JS Practice Projects</h2>
-    <a onclick="loadProject('Project_Exercises/GuessNumber/index.html')">Guess Number</a>
-    <a onclick="loadProject('Project_Exercises/SnakeWaterGun/index.html')">Snake Water Gun</a>
-    <a onclick="loadProject('Project_Exercises/joke/index.html')">Joke App</a>
+      <div class="card" data-title="20 basic projects" onclick="go('html/20-projects.html')">
+        <i class="fa-solid fa-layer-group icon"></i>
+        <h4>20 Basic Projects</h4>
+      </div>
 
-    <p class="empty">⬅ Left se project select karo</p>
-  </div>
+      <div class="card" data-title="html css projects" onclick="go('html/html-css-projects.html')">
+        <i class="fa-brands fa-html5 icon"></i>
+        <h4>HTML CSS Projects</h4>
+      </div>
 
-  <!-- RIGHT VIEW -->
-  <iframe id="viewer" class="viewer"></iframe>
+      <div class="card" data-title="javascript projects" onclick="go('html/js-projects.html')">
+        <i class="fa-brands fa-js icon"></i>
+        <h4>JavaScript Projects</h4>
+      </div>
 
-  <script>
-    function loadProject(path) {
-      document.getElementById("viewer").src = path;
-    }
-  </script>
+    </div>
+  </section>
 
+  <footer class="footer">
+    <p>© 2025 Aditya Kumar</p>
+
+    <div class="footer-icons">
+      <a href="https://github.com/debug-node" target="_blank" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
 </body>
+
 </html>
