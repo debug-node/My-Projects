@@ -111,11 +111,9 @@ body {
   justify-content: center;
   gap: 12px;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(22, 31, 50, 0.9),
-      rgba(15, 21, 36, 0.95)
-    );
+      rgba(15, 21, 36, 0.95));
   backdrop-filter: blur(6px);
   border-radius: 16px;
   padding: 22px;
