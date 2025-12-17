@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline Progress</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ✅ BUTTONS AND TIMELINE ON SAME LINE -->
+        <div class="controls">
+            <button class="btn" id="prev">Previous</button>
+
+            <div class="timeline-box">
+                <div class="timeline" id="timeline"></div>
+
+                <!-- Circles + labels -->
+                <div class="step">
+                    <div class="circle active">1</div>
+                    <p>Step 1</p>
+                </div>
+                <div class="step">
+                    <div class="circle">2</div>
+                    <p>Step 2</p>
+                </div>
+                <div class="step">
+                    <div class="circle">3</div>
+                    <p>Step 3</p>
+                </div>
+                <div class="step">
+                    <div class="circle">4</div>
+                    <p>Step 4</p>
+                </div>
+                <div class="step">
+                    <div class="circle">5</div>
+                    <p>Step 5</p>
+                </div>
+            </div>
+
+            <button class="btn" id="next">Next</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

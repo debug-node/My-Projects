@@ -1,0 +1,69 @@
+/*.container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+
+        }
+
+    .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+            width: 45px;
+            border: 2px solid black;
+        } */
+/* Page background & text */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #dbeafe);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 40px;
+}
+
+/* Title */
+.title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Container for boxes */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* wrap if screen is small */
+    max-width: 90%;
+}
+
+/* Each box */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    /* border: 2px solid #333; */
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on box */
+.box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

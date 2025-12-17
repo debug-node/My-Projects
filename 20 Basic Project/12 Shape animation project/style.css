@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0d0d0d;
+    overflow: hidden;
+    transition: background 1s ease;
+    font-family: Arial, sans-serif;
+}
+
+/* 🔥 Project Title Styling */
+.title {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: #ffffffcc;
+    letter-spacing: 1px;
+    z-index: 10;
+    font-weight: bold;
+
+    /* NEW GLOW ANIMATION */
+    animation: titleGlow 2s infinite alternate;
+}
+
+/* 🔥 Glow effect animation */
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 5px #00f7ff,
+            0 0 10px #00f7ff,
+            0 0 20px #00f7ff;
+        color: #e6ffff;
+    }
+
+    100% {
+        text-shadow: 0 0 12px #ff00ea,
+            0 0 25px #ff00ea,
+            0 0 40px #ff00ea;
+        color: #ffe6ff;
+    }
+}
+
+
+#box {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Base shape */
+span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    background: currentColor;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: moveUp 2.5s linear forwards;
+    box-shadow: 0 0 15px currentColor;
+    opacity: 0.95;
+}
+
+/* circle */
+.circle {
+    border-radius: 50%;
+}
+
+/* heart */
+.heart {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'><path d='M12 21s-7.5-4.7-10.2-7C-0.2 10.8 1.7 6 6 6c2.3 0 3.5 1.5 4 2.5c.5-.9 1.7-2.5 4-2.5c4.3 0 6.2 4.8 4.2 8C19.5 16.3 12 21 12 21z'/></svg>");
+}
+
+/* star */
+.star {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'><path d='M12 .6l3.7 7.4L23.5 9.8l-5.8 5.6 1.6 8.6L12 19.9 4.7 24l1.6-8.6L.5 9.8l7.8-1.8z'/></svg>");
+}
+
+/* Shapes go higher upward */
+@keyframes moveUp {
+    from {
+        transform: translateY(0) scale(0.6);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-350px) scale(1);
+        opacity: 0;
+    }
+}

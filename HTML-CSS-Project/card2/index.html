@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+
+     <!-- Google Font: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            /* min-height: 980px; */
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 360px;
+            height: 500px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card img {
+            margin: 10px;
+            width: 100%;
+            height: 57%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .card p {
+            text-align: center;
+            font-size: 1.2rem;
+            
+        }
+         /* Responsive Design */
+        @media (max-width: 400px) {
+            .card {
+                width: 100%;
+                height: auto;
+            }
+
+            .card img {
+                height: auto;
+            }
+
+            .card p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="images/qrcode.png" alt="QR Code Image"/>
+
+            <h2>
+                Improve your front end skills by developing Projects
+            </h2>
+            <p>
+                Learn HTML, CSS, and JavaScript through real-world projects.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-container {
+            width: 360px;
+            height: 570px;
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .card-side {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            backface-visibility: hidden;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 57%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .card-front h2,
+        .card-back h2 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .card-front p,
+        .card-back p {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #8BC6EC;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #5faee3;
+        }
+
+        /* Responsive */
+        @media (max-width: 400px) {
+            .card-container {
+                width: 90%;
+                height: auto;
+            }
+
+            .card-front img {
+                height: auto;
+            }
+
+            .card-front p,
+            .card-back p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+        <div class="card">
+            <!-- Front Side -->
+            <div class="card-side card-front">
+                <img src="images/qrcode.png" alt="QR Code Image">
+                <h2>Improve your front end skills by developing Projects</h2>
+                <p>Learn HTML, CSS, and JavaScript through real-world projects.</p>
+            </div>
+
+            <!-- Back Side -->
+            <div class="card-side card-back">
+                <h2>Keep Practicing!</h2>
+                <p>Success comes with consistency. Build one project every week 🚀</p>
+                <a href="https://your-project-link.com" target="_blank" class="btn">View Project</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

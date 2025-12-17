@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="card" role="main" aria-labelledby="title">
+        <h2 id="title">Temperature Converter</h2>
+
+        <div class="input-container">
+            <label for="celsius">Celsius:</label>
+            <input type="number" id="celsius" placeholder="Enter temperature in Celsius" inputmode="numeric" />
+        </div>
+
+        <div class="input-container">
+            <label for="fahrenheit">Fahrenheit:</label>
+            <input type="number" id="fahrenheit" placeholder="Enter temperature in Fahrenheit" inputmode="numeric" />
+        </div>
+
+        <div class="input-container">
+            <label for="kelvin">Kelvin:</label>
+            <input type="number" id="kelvin" placeholder="Enter temperature in kelvin" inputmode="numeric" />
+        </div>
+
+        <div class="btn-row">
+            <button id="convertBtn" onclick="convertTemperature()">Convert</button>
+            <button id="resetBtn" onclick="resetInputs()" type="button">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

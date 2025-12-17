@@ -1,0 +1,104 @@
+:root {
+  --coin-size: 15rem;
+}
+
+* { box-sizing: border-box; }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, rgb(234, 148, 177), rgb(242, 124, 88));
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+#coin {
+  position: relative;
+  width: var(--coin-size);
+  height: var(--coin-size);
+  margin: 1.25rem 0;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(0,0,0,0.8);
+  border-radius: 50%;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Replace these images with any you like */
+.headsClass {
+  background-image: url("https://cdn.pixabay.com/photo/2019/04/15/20/42/bitcoin-4130299_1280.png");
+  background-color: #fff;
+}
+.tailsClass {
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/31/15/03/phoenix-1292958_640.png");
+  background-color: #fff;
+  transform: rotateY(180deg); /* backside initially */
+}
+
+/* Buttons */
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.8rem 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: skyblue;
+  transition: transform .08s ease, opacity .12s ease;
+}
+button:active { transform: translateY(1px); }
+button[disabled] { opacity: 0.6; cursor: not-allowed; }
+
+/* Animations */
+.animate-heads {
+  animation: flipHeads 3s forwards;
+}
+.animate-tails {
+  animation: flipTails 3s forwards;
+}
+
+/* Note: the final rotation values are selected so the correct face shows after animation */
+@keyframes flipHeads {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(1800deg); } /* ends showing heads face */
+}
+@keyframes flipTails {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(1620deg); } /* ends showing tails face */
+}
+
+/* small responsive tweak */
+@media (max-width:480px) {
+  :root { --coin-size: 12rem; }
+  button { padding: 0.6rem 0.85rem; }
+}
+
+#status{
+    font-weight: bold;
+    font-size: 1.2rem;
+}

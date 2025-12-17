@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Projects Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 300px;
+      overflow-y: auto;
+      background: #111;
+      color: #fff;
+      padding: 15px;
+    }
+
+    .sidebar h2 {
+      margin-top: 20px;
+      font-size: 18px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 6px 0;
+      color: #00c3ff;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .viewer {
+      flex: 1;
+      border: none;
+    }
+
+    .empty {
+      color: #aaa;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LEFT MENU -->
+  <div class="sidebar">
+
+    <h1>🚀 My Projects</h1>
+
+    <h2>10 Projects</h2>
+    <a onclick="loadProject('10 Project/Age Calculator/index.html')">Age Calculator</a>
+    <a onclick="loadProject('10 Project/BMI Calculator/index.html')">BMI Calculator</a>
+    <a onclick="loadProject('10 Project/Counter Application/index.html')">Counter App</a>
+    <a onclick="loadProject('10 Project/Loan Calculator/index.html')">Loan Calculator</a>
+    <a onclick="loadProject('10 Project/Love Calculator/index.html')">Love Calculator</a>
+    <a onclick="loadProject('10 Project/Palindrome Checker/index.html')">Palindrome Checker</a>
+    <a onclick="loadProject('10 Project/RGB Color Generator/index.html')">RGB Generator</a>
+    <a onclick="loadProject('10 Project/Time and Date Widget/index.html')">Time & Date</a>
+    <a onclick="loadProject('10 Project/Tip Calculator/index.html')">Tip Calculator</a>
+    <a onclick="loadProject('10 Project/Unicode Character/index.html')">Unicode Character</a>
+
+    <h2>20 Basic Projects</h2>
+    <a onclick="loadProject('20 Basic Project/1 Key Code/index.html')">Key Code</a>
+    <a onclick="loadProject('20 Basic Project/2 Drop Animation/index.html')">Drop Animation</a>
+    <a onclick="loadProject('20 Basic Project/3 Name Tag Sticker/index.html')">Name Tag</a>
+    <a onclick="loadProject('20 Basic Project/4 Coin Flip Application/index.html')">Coin Flip</a>
+    <a onclick="loadProject('20 Basic Project/5 Smoke Effect/index.html')">Smoke Effect</a>
+    <a onclick="loadProject('20 Basic Project/6 Timeline Project/index.html')">Timeline</a>
+    <a onclick="loadProject('20 Basic Project/7 Drag and Drop/index.html')">Drag & Drop</a>
+    <a onclick="loadProject('20 Basic Project/8 Temperature Converter/index.html')">Temperature</a>
+    <a onclick="loadProject('20 Basic Project/9 Click to Visible Letters/index.html')">Visible Letters</a>
+    <a onclick="loadProject('20 Basic Project/10 Click to Copy Clipboard/index.html')">Copy Clipboard</a>
+
+    <h2>HTML CSS Projects</h2>
+    <a onclick="loadProject('HTML-CSS-Project/blog/index.html')">Blog</a>
+    <a onclick="loadProject('HTML-CSS-Project/card/index.html')">Card</a>
+    <a onclick="loadProject('HTML-CSS-Project/card2/index.html')">Card 2</a>
+    <a onclick="loadProject('HTML-CSS-Project/media/index.html')">Media</a>
+    <a onclick="loadProject('HTML-CSS-Project/netflix clone/index.html')">Netflix Clone</a>
+    <a onclick="loadProject('HTML-CSS-Project/product/index.html')">Product</a>
+    <a onclick="loadProject('HTML-CSS-Project/reciepi/index.html')">Recipe</a>
+    <a onclick="loadProject('HTML-CSS-Project/Studysync/index.html')">StudySync</a>
+
+    <h2>JS Practice Projects</h2>
+    <a onclick="loadProject('Project_Exercises/GuessNumber/index.html')">Guess Number</a>
+    <a onclick="loadProject('Project_Exercises/SnakeWaterGun/index.html')">Snake Water Gun</a>
+    <a onclick="loadProject('Project_Exercises/joke/index.html')">Joke App</a>
+
+    <p class="empty">⬅ Left se project select karo</p>
+  </div>
+
+  <!-- RIGHT VIEW -->
+  <iframe id="viewer" class="viewer"></iframe>
+
+  <script>
+    function loadProject(path) {
+      document.getElementById("viewer").src = path;
+    }
+  </script>
+
+</body>
+</html>

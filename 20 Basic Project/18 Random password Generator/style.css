@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #b17981, #8f94fb);
+    animation: bgMove 6s infinite alternate ease-in-out;
+}
+
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+}
+
+.container h1 {
+    font-weight: bold;
+    margin-bottom: 36px;
+    text-align: center;
+    color: #333;
+    text-decoration: underline;
+    position: relative;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.inputBox {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.inputBox span {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.inputBox span:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+.passBox {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #f5f5f5;
+    color: #444;
+    outline: none;
+    transition: 0.3s;
+}
+
+.passBox:focus {
+    border-color: #7289da;
+    box-shadow: 0 0 10px rgba(114,137,218,0.3);
+    background-color: #fff;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.row p, .row label {
+    flex-basis: 60%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.row p {
+    font-weight: 700;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.3);
+}
+
+.genBtn {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(120deg, #3162cb, #8f94fb);
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.4s ease;
+}
+
+.genBtn:hover {
+    background: linear-gradient(120deg, #1d1e20, #4e4f50);
+    transform: translateY(-3px);
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.pass-indicator {
+    width: 100%;
+    height: 6px;
+    position: relative;
+    background: #dfdfdf;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.pass-indicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    transition: width 0.4s ease, background 0.4s ease;
+}
+
+.pass-indicator.weak::before {
+    width: 25%;
+    background-color: #e64a4a;
+}
+
+.pass-indicator.medium::before {
+    width: 60%;
+    background-color: #f1c80b;
+}
+
+.pass-indicator.strong::before {
+    width: 100%;
+    background-color: #28c76f;
+}

@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #ecf0f1;
+}
+
+.container {
+    text-align: center;
+}
+
+/* 👇 New wrapper for alignment */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* TIMELINE BOX */
+/* Keep timeline centered */
+.timeline-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    max-width: 100%;
+    width: 450px;
+    padding: 0 35px;
+    /* 🟢 spacing inside so line stays centered */
+}
+
+/* YELLOW PROGRESS BAR */
+.timeline {
+    background: linear-gradient(90deg, #f39c12, #f1c40f);
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    /* 🟢 start after padding */
+    right: 35px;
+    /* 🟢 end before padding */
+    transform: translateY(-50%);
+    height: 6px;
+    width: 0%;
+    z-index: -1;
+    border-radius: 3px;
+    transition: width 0.5s ease-in-out;
+}
+
+.timeline-box::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    /* 🟢 match with timeline */
+    right: 35px;
+    /* 🟢 match with timeline */
+    transform: translateY(-50%);
+    height: 6px;
+    z-index: -1;
+    border-radius: 3px;
+}
+
+/* CIRCLE WRAPPER (with labels) */
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* INDIVIDUAL CIRCLES */
+.circle {
+    background: #555;
+    border-radius: 50%;
+    color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    height: 60px;
+    width: 60px;
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+}
+
+/* Active glow (same as before) */
+.circle.active {
+    background: radial-gradient(circle, #f1c40f, #f39c12);
+    border: 3px solid #fff;
+    box-shadow: 0 0 25px #f1c40f, 0 0 40px rgba(241, 196, 15, 0.5);
+    transform: scale(1.1);
+}
+
+/* 🟢 New size variants for progressive growth */
+.circle.size-1 {
+    transform: scale(1.05);
+}
+
+.circle.size-2 {
+    transform: scale(1.15);
+}
+
+.circle.size-3 {
+    transform: scale(1.25);
+}
+
+.circle.size-4 {
+    transform: scale(1.35);
+}
+
+.circle.size-5 {
+    transform: scale(1.45);
+}
+
+
+/* LABELS UNDER CIRCLES */
+.step p {
+    font-size: 14px;
+    color: #ecf0f1;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+
+.step .circle.active+p {
+    font-weight: 600;
+    opacity: 1;
+    color: #ffeaa7;
+}
+
+/* BUTTONS */
+.btn {
+    background: linear-gradient(90deg, #e74c3c, #e67e22);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 12px 30px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn:focus {
+    outline: none;
+}

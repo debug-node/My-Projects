@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Hacking Simulator</title>
+  <style>
+    body {
+      background-color: #001a00;
+      color: #00ff00;
+      font-family: monospace;
+      font-size: 22px;
+      padding: 20px;
+    }
+
+    .blinking {
+      display: inline-block;
+      width: 3ch;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0.2
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const steps = [
+      ">>> Initializing Hacking",
+      ">>> Reading your Files",
+      ">>> Password files Detected",
+      ">>> Sending all passwords and personal files to server",
+      ">>> Cleaning up"
+    ];
+
+    // make a random delay between 1–7 seconds
+    function wait() {
+      return new Promise(res => setTimeout(res, (1 + Math.random() * 6) * 1000));
+    }
+
+    async function run() {
+      for (const text of steps) {
+        // add new line with blinking dots
+        let div = document.createElement("div");
+        div.innerHTML = text + '<span class="blinking">...</span>';
+        document.body.appendChild(div);
+        window.scrollTo(0, document.body.scrollHeight);
+
+        // wait random time
+        await wait();
+
+        // stop blinking and show done
+        div.querySelector('.blinking').textContent = ' ✓';
+      }
+      // final message
+      let done = document.createElement("div");
+      done.innerHTML = ">>> Your System is Hacked!";
+      document.body.appendChild(done);
+    }
+
+    run();
+  </script>
+</body>
+
+</html>

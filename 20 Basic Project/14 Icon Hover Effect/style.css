@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+    background: radial-gradient(circle at 20% 30%, rgba(212, 32, 122, 0.827), rgba(109, 91, 251, 0) 50%), 
+                radial-gradient(circle at 80% 75%, rgba(38, 123, 122, 0.951), rgba(43, 212, 209, 0) 40%),
+                linear-gradient(135deg, #081841db 0%, #14253efb 50%, #152d3f 100%);
+    background-blend-mode: screen;
+    color: #e6eef8;
+    overflow: hidden;
+    cursor: none;
+}
+
+.page {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 40px;
+}
+
+.card {
+    position: relative;
+    width: min(720px, 92vw);
+    padding: 34px;
+    border-radius: 18px;
+    background: linear-gradient(180deg,
+            rgba(15, 21, 46, 0.65) 0%,
+            rgba(15, 21, 46, 0.35) 45%,
+            rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    text-align: center;
+    z-index: 3;
+}
+
+.title {
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+    letter-spacing: 0.6px;
+}
+
+.hint {
+    margin-top: 16px;
+    color: rgba(230, 238, 248, 0.7);
+    font-size: 0.95rem;
+}
+
+.icon-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 5vw, 48px);
+    padding: 18px;
+    margin-top: 6px;
+}
+
+.icon-nav li {
+    list-style: none;
+    position: relative;
+    width: 84px;
+    height: 84px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    transition: transform 280ms cubic-bezier(.2, .9, .3, 1), box-shadow 220ms;
+    transform-origin: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.icon-nav i {
+    font-size: 2.4rem;
+    color: #f8fbff;
+    transition: transform 220ms, color 220ms, filter 220ms;
+    display: inline-block;
+    transform-origin: center;
+    text-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+}
+
+.icon-nav li:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(2, 6, 23, 0.6);
+}
+
+.icon-nav li:hover i {
+    transform: translateY(-4px) scale(1.06);
+    color: #ffffff;
+    filter: drop-shadow(0 8px 32px rgba(123, 92, 255, 0.28));
+}
+
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 140px;
+    height: 140px;
+    transform: translate(-50%, -50%) scale(0.18);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 280ms cubic-bezier(.2, .9, .3, 1), opacity 200ms;
+    display: grid;
+    place-items: center;
+}
+
+.cursor-core {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(162, 15, 116, 0.633), rgba(14, 156, 169, 0.253));
+    box-shadow: 0 12px 40px rgba(123, 92, 255, 0.18), 0 2px 12px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 220ms, box-shadow 220ms;
+}
+
+.cursor-label {
+    position: absolute;
+    bottom: -28px;
+    background: rgba(0, 0, 0, 0.021);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: #eaf4ff;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 180ms, transform 180ms;
+}
+
+.cursor.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.cursor.active .cursor-core {
+    transform: scale(1.18);
+    box-shadow: 0 30px 80px rgba(123, 92, 255, 0.32);
+}
+
+.cursor.active .cursor-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width:520px) {
+    .icon-nav li {
+        width: 64px;
+        height: 64px;
+    }
+
+    .icon-nav i {
+        font-size: 1.8rem;
+    }
+
+    .cursor {
+        width: 100px;
+        height: 100px;
+        transform: translate(-50%, -50%) scale(0.16);
+    }
+
+    .cursor-core {
+        width: 48px;
+        height: 48px;
+    }
+}

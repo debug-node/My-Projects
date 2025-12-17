@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Coin Flip Application</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="coin" aria-hidden="true">
+            <div id="heads" class="face headsClass" aria-hidden="true"></div>
+            <div id="tails" class="face tailsClass" aria-hidden="true"></div>
+        </div>
+
+        <div class="controls">
+            <button id="flip">Flip the Coin</button>
+            <button id="reset" title="Reset counts">Reset</button>
+        </div>
+
+        <p><strong> Heads: <span id="headsCount">0</span> | Tails: <span id="tailsCount">0</span></p>
+        <p id="status" aria-live="polite"></p>
+    </div>
+
+    <!-- Audio for flip (replace src with your file or a hosted URL) -->
+    <audio id="flipSound" preload="auto" src="https://www.soundjay.com/misc/sounds/coin-drop-1.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

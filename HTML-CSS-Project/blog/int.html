@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Codehelp Blogs</title>
+  <style>
+    /* Include your CSS here or link to external file */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .header_container {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .header_title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .header_desc {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .main_container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card_container {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+
+    .card_container:hover {
+      transform: scale(1.02);
+    }
+
+    .card_image_container {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .card_image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card_title_container {
+      padding: 1rem;
+    }
+
+    .card_title {
+      font-size: 1.2rem;
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+
+    .card_desc {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .card_footer_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-top: 1px solid #eee;
+    }
+
+    .author_container {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .author_avatar_container {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .author_avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .author_info_container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .author_name {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .author_date {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .card_tag_container {
+      background-color: #eef;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header_container">
+      <h1 class="header_title">CodeHelp Blogs</h1>
+      <p class="header_desc">Explore insightful stories across technology, health, travel and more.</p>
+    </header>
+
+    <main class="main_container">
+      <!-- Card 1 -->
+      <div class="card_container">
+        <div class="card_image_container">
+          <img src="https://source.unsplash.com/random/300x200?technology" class="card_image" alt="Technology" />
+        </div>
+        <div class="card_title_container">
+          <h2 class="card_title">AI Tools Changing the World</h2>
+          <p class="card_desc">From ChatGPT to autonomous cars, AI is now reshaping everything.</p>
+        </div>
+        <div class="card_footer_container">
+          <div class="author_container">
+            <div class="author_avatar_container">
+              <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Rohan&size=64" class="author_avatar" alt="Rohan" />
+            </div>
+            <div class="author_info_container">
+              <span class="author_name">Rohan Mehta</span>
+              <span class="author_date">Aug 2, 2025</span>
+            </div>
+          </div>
+          <span class="card_tag_container">Technology</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card_container">
+        <div class="card_image_container">
+          <img src="https://source.unsplash.com/random/300x200?fitness" class="card_image" alt="Fitness" />
+        </div>
+        <div class="card_title_container">
+          <h2 class="card_title">Morning Habits for a Healthy Life</h2>
+          <p class="card_desc">Start your day with energy using these simple but powerful tips.</p>
+        </div>
+        <div class="card_footer_container">
+          <div class="author_container">
+            <div class="author_avatar_container">
+              <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Anjali&size=64" class="author_avatar" alt="Anjali" />
+            </div>
+            <div class="author_info_container">
+              <span class="author_name">Anjali Verma</span>
+              <span class="author_date">Jul 28, 2025</span>
+            </div>
+          </div>
+          <span class="card_tag_container">Health</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card_container">
+        <div class="card_image_container">
+          <img src="https://source.unsplash.com/random/300x200?travel" class="card_image" alt="Travel" />
+        </div>
+        <div class="card_title_container">
+          <h2 class="card_title">Exploring Himachal on a Budget</h2>
+          <p class="card_desc">Your complete guide to budget travel in the lap of the Himalayas.</p>
+        </div>
+        <div class="card_footer_container">
+          <div class="author_container">
+            <div class="author_avatar_container">
+              <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Vikram&size=64" class="author_avatar" alt="Vikram" />
+            </div>
+            <div class="author_info_container">
+              <span class="author_name">Vikram Singh</span>
+              <span class="author_date">Jul 15, 2025</span>
+            </div>
+          </div>
+          <span class="card_tag_container">Travel</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card_container">
+        <div class="card_image_container">
+          <img src="https://source.unsplash.com/random/300x200?coding" class="card_image" alt="Coding" />
+        </div>
+        <div class="card_title_container">
+          <h2 class="card_title">Top 5 JavaScript Tips for Beginners</h2>
+          <p class="card_desc">These essential JavaScript tricks will make your life easier.</p>
+        </div>
+        <div class="card_footer_container">
+          <div class="author_container">
+            <div class="author_avatar_container">
+              <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Neha&size=64" class="author_avatar" alt="Neha" />
+            </div>
+            <div class="author_info_container">
+              <span class="author_name">Neha Sharma</span>
+              <span class="author_date">Jul 10, 2025</span>
+            </div>
+          </div>
+          <span class="card_tag_container">Coding</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card_container">
+        <div class="card_image_container">
+          <img src="https://source.unsplash.com/random/300x200?nutrition" class="card_image" alt="Nutrition" />
+        </div>
+        <div class="card_title_container">
+          <h2 class="card_title">Easy Protein Snacks at Home</h2>
+          <p class="card_desc">Delicious high-protein recipes you can make in 10 minutes.</p>
+        </div>
+        <div class="card_footer_container">
+          <div class="author_container">
+            <div class="author_avatar_container">
+              <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Sana&size=64" class="author_avatar" alt="Sana" />
+            </div>
+            <div class="author_info_container">
+              <span class="author_name">Sana Iqbal</span>
+              <span class="author_date">Jul 3, 2025</span>
+            </div>
+          </div>
+          <span class="card_tag_container">Food</span>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card_container">
+        <div class="card_image_container">
+          <img src="https://source.unsplash.com/random/300x200?mindfulness" class="card_image" alt="Mindfulness" />
+        </div>
+        <div class="card_title_container">
+          <h2 class="card_title">Mastering the Art of Focus</h2>
+          <p class="card_desc">Improve your concentration and eliminate distractions with these steps.</p>
+        </div>
+        <div class="card_footer_container">
+          <div class="author_container">
+            <div class="author_avatar_container">
+              <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Aditya&size=64" class="author_avatar" alt="Aditya" />
+            </div>
+            <div class="author_info_container">
+              <span class="author_name">Aditya Kumar</span>
+              <span class="author_date">Jun 30, 2025</span>
+            </div>
+          </div>
+          <span class="card_tag_container">Mindfulness</span>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>

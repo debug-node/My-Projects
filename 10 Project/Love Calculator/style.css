@@ -1,0 +1,109 @@
+/* Reset and Centering */
+body {
+    background-color: #fceaff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    width: 500px;
+    background-color: #fff0f6;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff85c0;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #ff85c0;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Love Calculator Section */
+.love-calculator {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #ff69b4;
+    text-align: center;
+}
+
+/* Inputs */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ffb6c1;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ff69b4;
+    text-align: center;
+    outline: none;
+}
+
+/* Placeholder Styling */
+input::placeholder {
+    color: #ffb6c1;
+}
+
+/* Button Styling */
+button {
+    background-color: #ff85c0;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff69b4;
+    transform: scale(1.05);
+}
+
+/* Result Text */
+#result {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #ff85c0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

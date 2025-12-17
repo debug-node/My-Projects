@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bat Ball Stump — Game</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="cricket.css" />
+</head>
+
+<body>
+    <main class="app">
+        <header class="app-header">
+            <h1 class="title">Bat • Ball • Stump</h1>
+            <p class="subtitle">Choose your move — beat the computer!</p>
+        </header>
+
+        <section class="game-card">
+            <div class="choices" role="radiogroup" aria-label="Game choices">
+                <button class="choice-button" onclick="playGame('Bat')" aria-label="Choose Bat">
+                    <img src="images/bat.png" alt="Bat" class="choice-image" />
+                    <span class="choice-label">Bat</span>
+                </button>
+
+                <button class="choice-button" onclick="playGame('Ball')" aria-label="Choose Ball">
+                    <img src="images/ball.png" alt="Ball" class="choice-image" />
+                    <span class="choice-label">Ball</span>
+                </button>
+
+                <button class="choice-button" onclick="playGame('Stump')" aria-label="Choose Stump">
+                    <img src="images/stump.png" alt="Stump" class="choice-image" />
+                    <span class="choice-label">Stump</span>
+                </button>
+            </div>
+
+            <div class="result-panel" aria-live="polite">
+                <div class="result-row">
+                    <strong>You:</strong>
+                    <div id="user-move" class="move-text"></div>
+                </div>
+                <div class="result-row">
+                    <strong>Computer:</strong>
+                    <div id="computer-move" class="move-text"></div>
+                </div>
+                <div class="result-row result-message">
+                    <div id="result"></div>
+                </div>
+
+                <div class="score-box">
+                    <div class="score-item" id="score-win">Wins <span id="wins">0</span></div>
+                    <div class="score-item" id="score-loss">Loss <span id="loss">0</span></div>
+                    <div class="score-item" id="score-tie">Tie<span id="tie">0</span></div>
+                </div>
+
+                <div class="controls">
+                    <button id="reset-btn" class="reset-button"
+                        onclick="localStorage.clear(); resetScore();">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <small>Have fun and Beat the computer on your guessing confidence.</small>
+        </footer>
+    </main>
+
+    <script src="cricket.js"></script>
+</body>
+
+</html>
