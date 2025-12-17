@@ -1,0 +1,3 @@
+[submodule "Loan Calculator"]
+	path = Loan Calculator
+	url = https://github.com/debug-node/Loan-Calculator.git
