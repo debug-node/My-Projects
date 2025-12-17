@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="back" onclick="go('../index.html')">⬅ Back</div>
+  <h2 class="page-title">JavaScript Projects</h2>
+
+  <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()" />
+
+
+  <div class="grid" id="projects"></div>
+
+  <script src="../script.js"></script>
+
+  <script>
+    const projects = [
+      {
+        title: "Calculator",
+        icon: "fa-calculator",
+        live: "../Project/Calculator/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/Calculator"
+      },
+      {
+        title: "Color Box",
+        icon: "fa-palette",
+        live: "../Project/color box/colorbox.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/color box"
+      },
+      {
+        title: "Cricket Game",
+        icon: "fa-cricket-bat-ball",
+        live: "../Project/Cricket Game/cricket.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/Cricket Game"
+      },
+      {
+        title: "Dynamic Website",
+        icon: "fa-globe",
+        live: "../Project/dynamic website/dynamicwebsite.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/dynamic website"
+      },
+      {
+        title: "Factorial",
+        icon: "fa-hashtag",
+        live: "../Project/factorial/factorial.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/factorial"
+      },
+      {
+        title: "Guess Number",
+        icon: "fa-question",
+        live: "../Project/GuessNumber/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/GuessNumber"
+      },
+      {
+        title: "Hacking Terminal",
+        icon: "fa-terminal",
+        live: "../Project/hacking/hackingTerminal.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/hacking"
+      },
+      {
+        title: "Hacking Terminal",
+        icon: "fa-terminal",
+        live: "../Project/hacking/index2.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/hacking"
+      },
+      {
+        title: "Hacking Terminal",
+        icon: "fa-terminal",
+        live: "../Project/hacking/index3.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/hacking"
+      },
+      {
+        title: "Tell Me Joke",
+        icon: "fa-face-laugh",
+        live: "../Project/Joke/TellMeJoke.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/Joke"
+      },
+      {
+        title: "Myntra Bag",
+        icon: "fa-bag-shopping",
+        live: "../Project/Myntra bag/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/Myntra bag"
+      },
+      {
+        title: "Snake Water Gun",
+        icon: "fa-gamepad",
+        live: "../Project/SnakeWaterGun/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/Project/SnakeWaterGun"
+      }
+    ];
+
+    renderProjects(projects);
+  </script>
+
+</body>
+
+</html>

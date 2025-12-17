@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML CSS Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="back" onclick="go('../index.html')">⬅ Back</div>
+  <h2 class="page-title">HTML & CSS Projects</h2>
+  <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()" />
+
+  <div class="grid" id="projects"></div>
+
+  <script src="../script.js"></script>
+
+  <script>
+    const projects = [
+      {
+        title: "Blog",
+        icon: "fa-blog",
+        live: "../HTML-CSS-Project/blog/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/blog"
+      },
+      {
+        title: "Blog 2",
+        icon: "fa-blog",
+        live: "../HTML-CSS-Project/blog/int.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/blog"
+      },
+      {
+        title: "Nature Card 1.1",
+        icon: "fa-leaf",
+        live: "../HTML-CSS-Project/card/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card"
+      },
+      {
+        title: "Nature Card 1.2",
+        icon: "fa-leaf",
+        live: "../HTML-CSS-Project/card/index2.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card"
+      },
+      {
+        title: "Business Card 2.1",
+        icon: "fa-id-card",
+        live: "../HTML-CSS-Project/card2/card.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card2"
+      },
+      {
+        title: "Business Card 2.2",
+        icon: "fa-id-card",
+        live: "../HTML-CSS-Project/card2/one.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card2"
+      },
+      {
+        title: "Business Card 2.3",
+        icon: "fa-id-card",
+        live: "../HTML-CSS-Project/card2/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card2"
+      },
+      {
+        title: "Business Card 2.4",
+        icon: "fa-id-card-clip",
+        live: "../HTML-CSS-Project/card2/swipeCard.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card2"
+      },
+      {
+        title: "Media 1.1",
+        icon: "fa-photo-film",
+        live: "../HTML-CSS-Project/media/media basic.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/media"
+      },
+      {
+        title: "Media 1.2",
+        icon: "fa-photo-film",
+        live: "../HTML-CSS-Project/media/Media.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/media"
+      },
+      {
+        title: "Resume",
+        icon: "fa-file-lines",
+        live: "../HTML-CSS-Project/media/Resume.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/media"
+      },
+      {
+        title: "Netflix Clone",
+        icon: "fa-brands fa-netflix",
+        live: "../HTML-CSS-Project/netflix clone/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/netflix clone"
+      },
+      {
+        title: "Product",
+        icon: "fa-box",
+        live: "../HTML-CSS-Project/product/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/product"
+      },
+      {
+        title: "Product 2",
+        icon: "fa-box-open",
+        live: "../HTML-CSS-Project/product/index2.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/product"
+      },
+      {
+        title: "Recipe",
+        icon: "fa-utensils",
+        live: "../HTML-CSS-Project/reciepi/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/reciepi"
+      },
+      {
+        title: "StudySync",
+        icon: "fa-graduation-cap",
+        live: "../HTML-CSS-Project/Studysync/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/Studysync"
+      }
+    ];
+
+    renderProjects(projects);
+  </script>
+
+</body>
+
+</html>

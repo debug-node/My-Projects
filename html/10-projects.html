@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>10 Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="back" onclick="go('../index.html')">⬅ Back</div>
+
+  <h2 class="page-title">10 JavaScript Projects</h2>
+
+  <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()" />
+
+  <div class="grid" id="projects"></div>
+
+  <script src="../script.js"></script>
+
+  <script>
+    const projects = [
+      {
+        title: "Age Calculator",
+        icon: "fa-calculator",
+        live: "../10 Project/Age Calculator/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/Age Calculator"
+      },
+      {
+        title: "BMI Calculator",
+        icon: "fa-weight-scale",
+        live: "../10 Project/BMI Calculator/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/BMI Calculator"
+      },
+      {
+        title: "Counter App",
+        icon: "fa-plus-minus",
+        live: "../10 Project/Counter Application/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/Counter Application"
+      },
+      {
+        title: "Loan Calculator",
+        icon: "fa-hand-holding-dollar",
+        live: "../10 Project/Loan Calculator/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/Loan Calculator"
+      },
+      {
+        title: "Love Calculator",
+        icon: "fa-heart",
+        live: "../10 Project/Love Calculator/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/Love Calculator"
+      },
+      {
+        title: "Palindrome Checker",
+        icon: "fa-spell-check",
+        live: "../10 Project/Palindrome Checker/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/Palindrome Checker"
+      },
+      {
+        title: "RGB Generator",
+        icon: "fa-palette",
+        live: "../10 Project/RGB Color Generotor/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/RGB Color Generotor"
+      },
+      {
+        title: "Time & Date",
+        icon: "fa-clock",
+        live: "../10 Project/Time and Date Widget/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/Time and Date Widget"
+      },
+      {
+        title: "Tip Calculator",
+        icon: "fa-receipt",
+        live: "../10 Project/Tip Calculator/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/Tip Calculator"
+      },
+      {
+        title: "Unicode Character",
+        icon: "fa-code",
+        live: "../10 Project/Unicode Character/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/10 Project/Unicode Character"
+      }
+    ];
+
+    renderProjects(projects);
+  </script>
+
+</body>
+
+</html>

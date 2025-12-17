@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>20 Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="back" onclick="go('../index.html')">⬅ Back</div>
+
+  <h2 class="page-title">20 Basic JavaScript Projects</h2>
+
+  <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()" />
+
+  <div class="grid" id="projects"></div>
+
+  <script src="../script.js"></script>
+
+  <script>
+    const projects = [
+      {
+        title: "Key Code",
+        icon: "fa-keyboard",
+        live: "../20 Basic Project/1 Key Code/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/1 Key Code"
+      },
+      {
+        title: "Drop Animation",
+        icon: "fa-water",
+        live: "../20 Basic Project/2 Drop Animation/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/2 Drop Animation"
+      },
+      {
+        title: "Name Tag Sticker",
+        icon: "fa-id-badge",
+        live: "../20 Basic Project/3 Name Tag Sticker/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/3 Name Tag Sticker"
+      },
+      {
+        title: "Coin Flip",
+        icon: "fa-coins",
+        live: "../20 Basic Project/4 Coin Flip Application/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/4 Coin Flip Application"
+      },
+      {
+        title: "Smoke Effect",
+        icon: "fa-smog",
+        live: "../20 Basic Project/5 Smoke Effect/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/5 Smoke Effect"
+      },
+      {
+        title: "Timeline",
+        icon: "fa-timeline",
+        live: "../20 Basic Project/6 Timeline Project/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/6 Timeline Project"
+      },
+      {
+        title: "Drag & Drop",
+        icon: "fa-hand-pointer",
+        live: "../20 Basic Project/7 Drag and Drop/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/7 Drag and Drop"
+      },
+      {
+        title: "Temperature Converter",
+        icon: "fa-temperature-half",
+        live: "../20 Basic Project/8 Temperature Converter/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/8 Temperature Converter"
+      },
+      {
+        title: "Visible Letters",
+        icon: "fa-eye",
+        live: "../20 Basic Project/9 Click to Visible Letters/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/9 Click to Visible Letters"
+      },
+      {
+        title: "Copy Clipboard",
+        icon: "fa-copy",
+        live: "../20 Basic Project/10 Click to Copy Clipboard/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/10 Click to Copy Clipboard"
+      },
+      {
+        title: "BG Slider",
+        icon: "fa-sliders",
+        live: "../20 Basic Project/11 Slider to Change BG Color/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/11 Slider to Change BG Color"
+      },
+      {
+        title: "Shape Animation",
+        icon: "fa-shapes",
+        live: "../20 Basic Project/12 Shape animation project/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/12 Shape animation project"
+      },
+      {
+        title: "Testimonial",
+        icon: "fa-comments",
+        live: "../20 Basic Project/13 Testimonial Application/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/13 Testimonial Application"
+      },
+      {
+        title: "Icon Hover",
+        icon: "fa-icons",
+        live: "../20 Basic Project/14 Icon Hover Effect/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/14 Icon Hover Effect"
+      },
+      {
+        title: "Navbar",
+        icon: "fa-bars",
+        live: "../20 Basic Project/15 Navbar Project/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/15 Navbar Project"
+      },
+      {
+        title: "Cash Calculator",
+        icon: "fa-cash-register",
+        live: "../20 Basic Project/16 Cash Calculator Application/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/16 Cash Calculator Application"
+      },
+      {
+        title: "Poll System",
+        icon: "fa-square-poll-horizontal",
+        live: "../20 Basic Project/17 Poll System Application/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/17 Poll System Application"
+      },
+      {
+        title: "Password Generator",
+        icon: "fa-lock",
+        live: "../20 Basic Project/18 Random password Generator/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/18 Random password Generator"
+      },
+      {
+        title: "Stopwatch",
+        icon: "fa-stopwatch",
+        live: "../20 Basic Project/19 Stopwatch Timer Application/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/19 Stopwatch Timer Application"
+      },
+      {
+        title: "Vowel Counter",
+        icon: "fa-font",
+        live: "../20 Basic Project/20 Project Vowel Counter/index.html",
+        code: "https://github.com/debug-node/My-Projects/tree/main/20 Basic Project/20 Project Vowel Counter"
+      }
+    ];
+
+    renderProjects(projects);
+  </script>
+
+</body>
+
+</html>
