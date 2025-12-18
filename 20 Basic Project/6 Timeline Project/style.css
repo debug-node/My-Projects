@@ -170,7 +170,7 @@ body {
     outline: none;
 }
 /* 📱 Mobile & Tablet devices (400px - 1000px) */
-@media (min-width: 400px) and (max-width: 1000px) {
+@media (min-width: 300px) and (max-width: 1000px) {
 
     body {
         padding: 20px;
