@@ -150,24 +150,32 @@ body {
     transform: translateY(0);
 }
 
-@media (max-width:520px) {
+/* Mobile devices between 300px and 1000px */
+@media (min-width: 300px) and (max-width: 1000px) {
+
+    .page {
+        padding: 24px;
+    }
+
+    .card {
+        width: min(90%, 620px);
+        padding: 26px;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .hint {
+        font-size: 0.9rem;
+    }
+
     .icon-nav li {
-        width: 64px;
-        height: 64px;
+        width: 72px;
+        height: 72px;
     }
 
     .icon-nav i {
-        font-size: 1.8rem;
-    }
-
-    .cursor {
-        width: 100px;
-        height: 100px;
-        transform: translate(-50%, -50%) scale(0.16);
-    }
-
-    .cursor-core {
-        width: 48px;
-        height: 48px;
+        font-size: 2rem;
     }
 }
