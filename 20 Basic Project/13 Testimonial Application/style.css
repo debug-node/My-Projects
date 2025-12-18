@@ -41,7 +41,7 @@ body {
 }
 
 .wrapper {
-    width: 100%;
+    width: min(90%, 600px);
     max-width: 600px;
     border-radius: 18px;
     padding: 2rem;
@@ -171,6 +171,23 @@ p {
     opacity: 1;
     transform: translateY(0);
     transition: all .45s cubic-bezier(.2, .8, .2, 1)
+}
+
+/* Mobile devices between 300px and 1000px */
+@media (min-width: 300px) and (max-width: 1000px) {
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        width: min(92%, 520px);   /* ❌ 100% nahi */
+        padding: 1.4rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
 }
 
 @media(max-width:700px) {
