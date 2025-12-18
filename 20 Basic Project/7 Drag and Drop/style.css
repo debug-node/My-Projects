@@ -65,6 +65,10 @@ h1 {
   transition: background-color 0.3s ease-in-out;
 }
 
+.box {
+  touch-action: none;   /* 🔥 mobile drag enable */
+}
+
 .box:hover {
   background: linear-gradient(90deg, #2980b9, #c0392b);
   transform: scale(1.03);
