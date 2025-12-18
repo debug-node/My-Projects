@@ -84,3 +84,63 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+/* 📱 Mobile & Tablet (300px – 1000px) */
+@media (max-width: 1000px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 30px 35px;
+        width: 100%;
+        max-width: 420px;
+    }
+
+    #first,
+    #d,
+    #i,
+    #t,
+    #y,
+    #a,
+    #complete {
+        font-size: 7rem;   /* 🔥 main fix */
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 10px 22px;
+    }
+
+    .btn-box {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .container {
+        padding: 22px 20px;
+    }
+
+    #first,
+    #d,
+    #i,
+    #t,
+    #y,
+    #a,
+    #complete {
+        font-size: 5.2rem;
+    }
+
+    .btn-box {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
