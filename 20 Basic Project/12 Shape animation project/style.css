@@ -92,3 +92,28 @@ span {
         opacity: 0;
     }
 }
+/* Mobile devices between 300px and 1000px */
+@media (min-width: 300px) and (max-width: 1000px) {
+
+    .title {
+        font-size: 20px;
+        top: 10px;
+    }
+
+    span {
+        width: 32px;
+        height: 32px;
+        box-shadow: 0 0 10px currentColor;
+    }
+
+    @keyframes moveUp {
+        from {
+            transform: translateY(0) scale(0.5);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-220px) scale(0.9);
+            opacity: 0;
+        }
+    }
+}
