@@ -150,7 +150,49 @@ input::-webkit-outer-spin-button {
 }
 
 @media (max-width: 360px) {
+
     .card {
-        width: calc(100% - 32px);
+        padding: 18px 16px;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .btn-row {
+        flex-direction: column;
+    }
+}
+
+/* 📱 Mobile & Tablet (300px – 1000px) */
+@media (max-width: 1000px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 9px 10px;
+    }
+
+    .btn-row button {
+        font-size: 15px;
+        padding: 11px;
     }
 }
