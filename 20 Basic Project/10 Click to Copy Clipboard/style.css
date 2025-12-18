@@ -106,3 +106,32 @@ h3 {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
+
+/* Mobile devices between 300px and 1000px */
+@media (min-width: 300px) and (max-width: 1000px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 420px;
+        padding: 2rem 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.9rem 1.5rem;
+    }
+
+    .message {
+        font-size: 0.95rem;
+        padding: 0.9rem 1rem;
+        text-align: center;
+    }
+}
