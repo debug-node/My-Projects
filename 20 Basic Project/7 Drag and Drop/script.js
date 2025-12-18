@@ -1,50 +1,66 @@
 function drag() {
 
-    let dragging = false;
-    let mouseX, mouseY;
+    let dragging = null;
+    let startX, startY;
     let eleX, eleY;
 
     const boxes = document.querySelectorAll("[draggable]");
 
     boxes.forEach(box => {
-        box.addEventListener('mousedown', mouseDown);
-        box.style.top = 0;
-        box.style.left = 0;
+        box.addEventListener("mousedown", startDrag);
+        box.addEventListener("touchstart", startDrag, { passive: false });
+
+        box.style.position = "relative";
+        box.style.left = "0px";
+        box.style.top = "0px";
     });
 
-    function mouseDown(e) {
+    function startDrag(e) {
         e.preventDefault();
 
         dragging = this;
 
-        mouseX = e.pageX;
-        mouseY = e.pageY;
+        const point = e.touches ? e.touches[0] : e;
 
-        eleX = Number.parseInt(dragging.style.left);
-        eleY = Number.parseInt(dragging.style.top);
+        startX = point.pageX;
+        startY = point.pageY;
 
-        document.addEventListener("mousemove", mouseMove);
-        document.addEventListener("mouseup", mouseUp);
+        eleX = parseInt(dragging.style.left) || 0;
+        eleY = parseInt(dragging.style.top) || 0;
+
+        document.addEventListener("mousemove", moveDrag);
+        document.addEventListener("touchmove", moveDrag, { passive: false });
+
+        document.addEventListener("mouseup", endDrag);
+        document.addEventListener("touchend", endDrag);
     }
 
-    function mouseMove(e) {
-        if (dragging) {
-            const deltaMouseX = e.pageX - mouseX;
-            const deltaMouseY = e.pageY - mouseY;
+    function moveDrag(e) {
+        if (!dragging) return;
 
-            dragging.style.left = deltaMouseX + eleX + "px";
-            dragging.style.top = deltaMouseY + eleY + "px";
+        e.preventDefault();
+        const point = e.touches ? e.touches[0] : e;
 
-        }
+        const dx = point.pageX - startX;
+        const dy = point.pageY - startY;
+
+        dragging.style.left = eleX + dx + "px";
+        dragging.style.top = eleY + dy + "px";
     }
 
-    function mouseUp(e) {
-        dragging = false;
-    }
+    function endDrag() {
+        dragging = null;
 
+        document.removeEventListener("mousemove", moveDrag);
+        document.removeEventListener("touchmove", moveDrag);
+
+        document.removeEventListener("mouseup", endDrag);
+        document.removeEventListener("touchend", endDrag);
+    }
 }
 
 drag();
+
 
 // ---------------------------
 // RESET BUTTON FUNCTIONALITY
