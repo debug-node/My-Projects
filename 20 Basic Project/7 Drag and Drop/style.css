@@ -143,3 +143,45 @@ h1 {
   background-color: #ffff00;
   /* Yellow */
 }
+
+/* 📱 Mobile devices between 300px and 1000px */
+@media (min-width: 300px) and (max-width: 1000px) {
+
+  body {
+    padding: 12px;
+    gap: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  /* Reset button responsive */
+  .reset-btn {
+    width: 70%;
+    max-width: 260px;
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  /* Container responsive */
+  .container {
+    width: 90vw;
+    max-width: 420px;
+  }
+
+  /* Boxes responsive */
+  .box {
+    width: 28vw;
+    height: 14vh;
+    min-height: 70px;
+    font-size: 0.75rem;
+  }
+
+  /* Hover label readable */
+  .box::after {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+}
