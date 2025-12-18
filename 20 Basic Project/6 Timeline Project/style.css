@@ -169,67 +169,68 @@ body {
 .btn:focus {
     outline: none;
 }
-/* 📱 Mobile & Tablet devices (400px - 1000px) */
+/* 📱 Mobile devices between 300px and 1000px */
 @media (min-width: 300px) and (max-width: 1000px) {
 
     body {
-        padding: 20px;
+        padding: 16px;
     }
 
     .container {
         width: 100%;
     }
 
-    /* Controls stack nicely */
+    /* Controls responsive */
     .controls {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
     }
 
-    /* Timeline width adjusts */
+    /* Timeline responsive width */
     .timeline-box {
         width: 100%;
-        max-width: 420px;
-        padding: 0 25px;
+        max-width: 380px;
+        padding: 0 20px;
     }
 
     .timeline,
     .timeline-box::before {
-        left: 25px;
-        right: 25px;
+        left: 20px;
+        right: 20px;
         height: 5px;
     }
 
-    /* Circles slightly smaller */
+    /* Circles smaller for mobile */
     .circle {
-        width: 52px;
-        height: 52px;
-        font-size: 20px;
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
     }
 
-    /* Reduce glow on small screens */
+    /* Active circle glow controlled */
     .circle.active {
-        box-shadow: 0 0 15px #f1c40f, 0 0 25px rgba(241, 196, 15, 0.5);
+        box-shadow: 0 0 14px #f1c40f,
+                    0 0 22px rgba(241, 196, 15, 0.45);
     }
 
-    /* Progressive scaling controlled */
-    .circle.size-1 { transform: scale(1.03); }
-    .circle.size-2 { transform: scale(1.1); }
-    .circle.size-3 { transform: scale(1.18); }
-    .circle.size-4 { transform: scale(1.25); }
-    .circle.size-5 { transform: scale(1.3); }
+    /* Scale variants adjusted */
+    .circle.size-1 { transform: scale(1.02); }
+    .circle.size-2 { transform: scale(1.08); }
+    .circle.size-3 { transform: scale(1.15); }
+    .circle.size-4 { transform: scale(1.22); }
+    .circle.size-5 { transform: scale(1.28); }
 
-    /* Labels readable */
+    /* Labels */
     .step p {
-        font-size: 13px;
+        font-size: 12px;
         text-align: center;
     }
 
-    /* Buttons responsive */
+    /* Buttons full width */
     .btn {
         width: 100%;
-        max-width: 260px;
-        font-size: 16px;
-        padding: 10px 20px;
+        max-width: 240px;
+        font-size: 15px;
+        padding: 10px 18px;
     }
 }
