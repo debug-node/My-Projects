@@ -251,3 +251,8 @@ h2.reveal::after {
     max-width: 100%;
   }
 }
+
+/* 📱 Mobile & Tablet (300px – 1000px) */
+@media (min-width: 300px) and (max-width: 1000px) {
+  /* Styles for mobile and tablet devices */
+}
