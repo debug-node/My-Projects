@@ -88,6 +88,10 @@ button:active {
 /* 📱 Mobile & Tablet (300px – 1000px) */
 @media (max-width: 1000px) {
 
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+    
     body {
         padding: 16px;
     }
@@ -121,6 +125,10 @@ button:active {
 
 @media (max-width: 360px) {
 
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+    
     .container {
         padding: 22px 20px;
     }
