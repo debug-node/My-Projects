@@ -1,53 +1,51 @@
-/* Reset and Centering */
-body {
-    background-color: #fceaff;
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffd6ea, #fceaff);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 16px;
 }
 
-/* Container Styling */
 .container {
-    width: 500px;
-    background-color: #fff0f6;
+    width: 100%;
+    max-width: 620px;
+    background: rgba(255, 240, 246, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #ff85c0;
+    border-radius: 18px;
+    border: 1.5px solid rgba(255, 133, 192, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
-/* Heading */
 h2 {
     color: #ff85c0;
     font-size: 28px;
     margin-bottom: 25px;
 }
 
-/* Love Calculator Section */
 .love-calculator {
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Labels */
 label {
-    display: block;
     margin-top: 10px;
     margin-bottom: 5px;
     font-size: 18px;
     color: #ff69b4;
-    text-align: center;
 }
 
-/* Inputs */
 input[type="text"] {
     width: 80%;
     padding: 12px;
@@ -60,12 +58,10 @@ input[type="text"] {
     outline: none;
 }
 
-/* Placeholder Styling */
 input::placeholder {
     color: #ffb6c1;
 }
 
-/* Button Styling */
 button {
     background-color: #ff85c0;
     color: #fff;
@@ -83,27 +79,46 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Result Text */
 #result {
     margin-top: 20px;
     font-size: 22px;
     color: #ff85c0;
     font-weight: bold;
-    text-align: center;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     .container {
-        width: 90%;
-        padding: 25px;
+        padding: 24px 16px;
+        border-radius: 14px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    label {
+        font-size: 16px;
     }
 
     input[type="text"] {
-        width: 90%;
+        width: 100%;
+        font-size: 15px;
     }
 
     button {
         width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .container {
+        padding: 48px;
     }
 }
