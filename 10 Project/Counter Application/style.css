@@ -19,10 +19,20 @@ body.dark-mode {
     --reset-hover: #c9302c;
 }
 
+html,
 body {
-    margin: 100px;
+    overflow-y: hidden;
+}
+
+body {
+    min-height: 100dvh;
     background-color: var(--bg-color);
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    margin: 0;
     transition: background-color 0.3s ease;
 }
 
@@ -40,7 +50,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    width: 500px;
     margin: 0 auto;
     padding: 40px 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -122,15 +132,10 @@ body.dark-mode #toggleModeBtn {
     color: #222;
 }
 
-/* =========================
-   RESPONSIVE UI
-   300px to 1000px
-========================= */
-
 /* Very small devices (300px – 360px) */
 @media (max-width: 360px) {
     body {
-        margin: 20px;
+        margin: 10px;
     }
 
     h1 {
@@ -150,12 +155,12 @@ body.dark-mode #toggleModeBtn {
 
     .button-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 
     button {
-        width: 100%;
+        width: 90px;
         font-size: 16px;
         padding: 10px;
         margin: 0;
@@ -175,10 +180,16 @@ body.dark-mode #toggleModeBtn {
 
     h1 {
         font-size: 22px;
+        margin-bottom: 12px;
     }
 
     .counter-display {
-        font-size: 60px;
+        font-size: 52px;
+        margin-bottom: 14px;
+    }
+
+    .container-card {
+        padding: 20px 16px;
     }
 
     button {
