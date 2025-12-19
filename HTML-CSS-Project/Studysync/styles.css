@@ -878,7 +878,7 @@ ul {
     }
 
     .footer-grid {
-        width: 75%;
+        width: 85%;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         line-height: 0.8rem;
