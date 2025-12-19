@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
+
+  <header class="header">
     <h1>🛍️ Product Catalog</h1>
+
     <div class="top-nav">
       <nav>
         <ul>
@@ -17,71 +21,81 @@
           <li><a href="#Clothing">Clothing</a></li>
         </ul>
       </nav>
+
       <div class="auth-cart">
-        <button class="login-btn">Login</button>
-        <button class="cart-btn">🛒 Cart (0)</button>
+        <button>Login</button>
+        <button>🛒 Cart (0)</button>
       </div>
     </div>
   </header>
 
-  <aside class="filters">
-    <h3>🔍 Filters</h3>
-    <label>
-      Category:
-      <select>
-        <option>All</option>
-        <option>Electronics</option>
-        <option>Clothing</option>
-        <option>Home Decor</option>
-      </select>
-    </label>
-    <label>
-      Price:
-      <input type="range" min="50" max="1000" />
-    </label>
-  </aside>
+  <div class="layout">
+    <aside class="filters">
+      <h3>🔍 Filters</h3>
 
-  <main>
-    <section id="Electronics">
-      <h2>Electronics</h2>
-      <div class="product-grid">
-        <div class="card">
-          <img src="lap.jpg" alt="Laptop" />
-          <h3>Lenovo IdeaPad 3</h3>
-          <p>$550 - In Stock</p>
-          <ul>
-            <li><b>Brand:</b> Lenovo</li>
-            <li><b>Screen:</b> 15.6"</li>
-            <li><b>Storage:</b> 256GB</li>
-            <li><b>RAM:</b> 12GB</li>
-          </ul>
-          <a href="https://laptopmedia.com/laptop-specs/lenovo-ideapad-3-15-2042/" target="_blank">View Details</a>
+      <label>
+        Category
+        <select>
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Clothing</option>
+          <option>Home Decor</option>
+        </select>
+      </label>
+
+      <label>
+        Price Range
+        <input type="range" min="50" max="1000">
+      </label>
+    </aside>
+
+    <main class="content">
+      <section id="Electronics">
+        <h2>Electronics</h2>
+
+        <div class="product-grid">
+
+          <div class="card">
+            <img src="lap.jpg" alt="Laptop">
+            <h3>Lenovo IdeaPad 3</h3>
+            <p class="price">$550 · In Stock</p>
+            <ul>
+              <li><b>Brand:</b> Lenovo</li>
+              <li><b>Screen:</b> 15.6"</li>
+              <li><b>Storage:</b> 256GB</li>
+              <li><b>RAM:</b> 12GB</li>
+            </ul>
+            <a href="#">View Details</a>
+          </div>
+
+          <div class="card">
+            <img src="mob.jpeg" alt="Mobile">
+            <h3>Poco M4 5G</h3>
+            <p class="price">$120 · In Stock</p>
+            <ul>
+              <li><b>Brand:</b> Poco</li>
+              <li><b>Screen:</b> 6.58"</li>
+              <li><b>Storage:</b> 64GB</li>
+              <li><b>RAM:</b> 4GB</li>
+            </ul>
+            <a href="#">View Details</a>
+          </div>
+
         </div>
+      </section>
 
-        <div class="card">
-          <img src="mob.jpeg" alt="Mobile" />
-          <h3>Poco M4 5G</h3>
-          <p>$120 - In Stock</p>
-          <ul>
-            <li><b>Brand:</b> Poco</li>
-            <li><b>Screen:</b> 6.58"</li>
-            <li><b>Storage:</b> 64GB</li>
-            <li><b>RAM:</b> 4GB</li>
-          </ul>
-          <a href="https://www.flipkart.com/poco-m4-5g-cool-blue-64-gb/p/itm7b27dd2f5da7e" target="_blank">View Details</a>
-        </div>
-      </div>
-    </section>
+      <section id="Clothing">
+        <h2>Clothing</h2>
+        <p>Coming soon…</p>
+      </section>
 
-    <section id="Clothing">
-      <h2>Clothing</h2>
-      <p>Coming soon...</p>
-    </section>
+      <section id="HomeDecor hookup">
+        <h2>Home Decor</h2>
+        <p>Coming soon…</p>
+      </section>
+    </main>
+  </div>
 
-    <section id="HomeDecor">
-      <h2>Home Decor</h2>
-      <p>Coming soon...</p>
-    </section>
-  </main>
 </body>
+
 </html>
