@@ -41,7 +41,7 @@ function clearDisplay() {
 
 function calculate() {
     try {
-        currentDisplay = eval(currentDisplay);
+        currentDisplay = Function('"use strict"; return (' + currentDisplay + ')')();
     } catch {
         currentDisplay = "Error";
     }
