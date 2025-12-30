@@ -18,15 +18,20 @@ function renderProjects(list) {
   list.forEach(p => {
     const card = document.createElement("div");
     card.className = "card";
+    card.dataset.title = p.title.toLowerCase();
 
     card.innerHTML = `
       <i class="fa-solid ${p.icon} icon"></i>
       <h4>${p.title}</h4>
       <div class="card-btns">
-        <button onclick="go('${p.live}')">Live</button>
-        <button onclick="openCode('${p.code}')">Code</button>
+        <button class="live-btn">Live</button>
+        <button class="code-btn">Code</button>
       </div>
     `;
+
+    // Use event listeners instead of onclick
+    card.querySelector(".live-btn").addEventListener("click", () => go(p.live));
+    card.querySelector(".code-btn").addEventListener("click", () => openCode(p.code));
 
     container.appendChild(card);
   });
@@ -34,12 +39,15 @@ function renderProjects(list) {
 
 /* Search (Home page categories) */
 function searchProjects() {
-  const input = document.getElementById("search").value.toLowerCase();
+  const searchInput = document.getElementById("search");
+  if (!searchInput) return; // Safety check
+
+  const input = searchInput.value.toLowerCase();
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
     const title = card.dataset.title || card.innerText.toLowerCase();
-    card.style.display = title.includes(input) ? "flex" : "none";
+    card.style.display = title.includes(input) ? "" : "none"; // Use empty string for default display
   });
 }
 
