@@ -16,10 +16,9 @@ body {
   color: #f1f5f9;
 }
 
-
 .hero {
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 40px 20px 40px;
   position: relative;
 }
 
@@ -58,7 +57,7 @@ body {
 #search {
   width: 100%;
   max-width: 420px;
-  margin: 0 auto 35px;
+  margin: 0 auto 15px;
   display: block;
   padding: 12px 16px;
   border-radius: 12px;
@@ -84,7 +83,7 @@ body {
 
 #projects {
   margin-top: 30px;
-  padding: 50px 20px 60px;
+  padding: 40px 20px 40px;
   background: rgba(14, 10, 10, 0.142);
   border-radius: 32px;
 }
@@ -101,10 +100,8 @@ body {
   padding-bottom: 40px;
 }
 
-.card {
-  width: 100%;
-  max-width: 240px;
-  min-height: 210px;
+.card,
+.skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,14 +113,28 @@ body {
       rgba(15, 21, 36, 0.95));
   backdrop-filter: blur(6px);
   border-radius: 16px;
-  padding: 22px;
-  text-align: center;
-  cursor: pointer;
   border: 1px solid #1f2937;
+  cursor: pointer;
   transition: all 0.35s ease;
 }
 
-.card:hover {
+.card {
+  width: 100%;
+  max-width: 240px;
+  min-height: 210px;
+  padding: 22px;
+  text-align: center;
+}
+
+.skill-card {
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.card:hover,
+.skill-card:hover {
   transform: translateY(-8px) scale(1.03);
   background: #02061733;
   box-shadow:
@@ -131,7 +142,8 @@ body {
     0 0 25px rgba(56, 189, 248, 0.25);
 }
 
-.card:active {
+.card:active,
+.skill-card:active {
   transform: scale(0.97);
 }
 
@@ -213,7 +225,7 @@ h2 {
   font-size: clamp(22px, 3vw, 30px);
   font-weight: 600;
   text-align: center;
-  margin: 25px 0 30px;
+  margin: 10px 0 10px;
   color: #e5e7eb;
   position: relative;
   letter-spacing: 0.4px;
@@ -242,6 +254,36 @@ h2.reveal::after {
   width: 70px;
 }
 
+.skills-section {
+  width: 100%;
+  margin: 32px 0;
+  padding: 32px 24px;
+  background: rgba(14, 10, 10, 0.142);
+  border-radius: 32px;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  justify-items: center;
+  justify-content: center;
+}
+
+.skill-card i {
+  font-size: 28px;
+  color: #38bdf8;
+}
+
+.skill-card span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e5e7eb;
+  letter-spacing: 0.3px;
+}
+
 @media (max-width: 480px) {
   .hero {
     padding-top: 40px;
@@ -249,5 +291,36 @@ h2.reveal::after {
 
   .card {
     max-width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, 120px);
+    gap: 24px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-section {
+    padding: 21px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 24px 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-section {
+    padding: 20px 18px;
   }
 }
