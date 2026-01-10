@@ -65,3 +65,13 @@ const observer = new IntersectionObserver(
 );
 
 headings.forEach(h => observer.observe(h));
+
+/* Initialize on page load */
+document.addEventListener("DOMContentLoaded", () => {
+  // Trigger search to ensure cards are visible
+  const searchInput = document.getElementById("search");
+  if (searchInput) {
+    searchInput.value = "";
+    searchProjects();
+  }
+});
