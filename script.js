@@ -74,4 +74,48 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.value = "";
     searchProjects();
   }
+
+  // Typing animation
+  const texts = [
+    "Frontend Developer",
+    "Creative Coder",
+    "Web Designer",
+    "Problem Solver",
+    "UI/UX Enthusiast"
+  ];
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingElement = document.querySelector(".typing-text");
+
+  if (typingElement) {
+    function type() {
+      const currentText = texts[textIndex];
+
+      if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typingSpeed = isDeleting ? 80 : 150;
+
+      if (!isDeleting && charIndex === currentText.length) {
+        typingSpeed = 2500; // Pause at end
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typingSpeed = 800;
+      }
+
+      setTimeout(type, typingSpeed);
+    }
+
+    // Start typing animation after header animations
+    setTimeout(type, 1200);
+  }
 });
