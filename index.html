@@ -9,93 +9,280 @@
   <meta name="description" content="Aditya Kumar | Frontend Developer Portfolio">
   <meta name="author" content="Aditya Kumar">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      10% {
+        transform: rotate(14deg);
+      }
+
+      20% {
+        transform: rotate(-8deg);
+      }
+
+      30% {
+        transform: rotate(14deg);
+      }
+
+      40% {
+        transform: rotate(-4deg);
+      }
+
+      50% {
+        transform: rotate(10deg);
+      }
+
+      60% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .wave-hand {
+      display: inline-block;
+      animation: wave 2s ease infinite;
+      transform-origin: 70% 70%;
+    }
+  </style>
+
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
 
-  <header class="hero">
-    <h1><span class="wave">👋</span> Hi, I'm Aditya</h1>
-    <p><span class="typing-text"></span><span class="cursor">|</span></p>
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="text-center">
 
-    <div class="hero-btns">
-      <a href="https://github.com/debug-node" target="_blank">GitHub</a>
-      <a href="#projects">View Projects</a>
+        <h1
+          class="text-4xl sm:text-5xl font-bold text-white mb-4 inline-flex items-center gap-3 justify-center flex-wrap">
+          <span class="wave-hand text-4xl sm:text-5xl">👋</span>
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient">
+            Hi, I'm Aditya
+          </span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-gray-300 mb-8 h-8">
+          <span class="typing-text"></span><span class="cursor animate-pulse">|</span>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="https://github.com/debug-node" target="_blank"
+            class="group relative px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
+            <span class="relative z-10 flex items-center gap-2">
+              <i class="fab fa-github"></i>
+              GitHub
+            </span>
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+            </div>
+          </a>
+
+          <a href="#projects"
+            class="px-6 py-3 border-2 border-purple-400 text-purple-300 font-semibold rounded-full hover:bg-purple-400 hover:text-white transition-all duration-300 hover:scale-105">
+            View Projects
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <input type="text" id="search" placeholder="🔍 Search categories..." onkeyup="searchProjects()" />
+  <!-- Search Bar -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="relative max-w-2xl mx-auto">
+      <input type="text" id="search" placeholder="🔍 Search categories..." onkeyup="searchProjects()"
+        class="w-full px-6 py-3 bg-white/10 backdrop-blur-lg border border-purple-400/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300" />
+    </div>
+  </div>
 
-  <section class="container" id="projects">
-    <div class="grid">
+  <!-- Projects Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20" id="projects">
+    <h2
+      class="text-3xl sm:text-4xl font-bold text-center text-white mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+      🤖 My Projects
+    </h2>
 
-      <div class="card" data-title="10 projects" onclick="go('html/10-projects.html')">
-        <i class="fa-solid fa-folder-open icon"></i>
-        <h4>10 Projects</h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
+
+      <div class="group cursor-pointer" data-title="10 projects" onclick="go('html/10-projects.html')">
+        <div
+          class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500">
+          </div>
+
+          <div class="relative z-10">
+            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-folder-open text-blue-400"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-2">10 Projects</h4>
+            <p class="text-gray-400 text-sm">Collection of mini projects</p>
+          </div>
+        </div>
       </div>
 
-      <div class="card" data-title="20 basic projects" onclick="go('html/20-projects.html')">
-        <i class="fa-solid fa-layer-group icon"></i>
-        <h4>20 Basic Projects</h4>
+      <div class="group cursor-pointer" data-title="20 basic projects" onclick="go('html/20-projects.html')">
+        <div
+          class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500">
+          </div>
+
+          <div class="relative z-10">
+            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-layer-group text-purple-400"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-2">20 Basic Projects</h4>
+            <p class="text-gray-400 text-sm">Beginner friendly projects</p>
+          </div>
+        </div>
       </div>
 
-      <div class="card" data-title="html css projects" onclick="go('html/html-css-projects.html')">
-        <i class="fa-brands fa-html5 icon"></i>
-        <h4>HTML CSS Projects</h4>
+      <div class="group cursor-pointer" data-title="html css projects" onclick="go('html/html-css-projects.html')">
+        <div
+          class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500">
+          </div>
+
+          <div class="relative z-10">
+            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-brands fa-html5 text-orange-400"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-2">HTML CSS Projects</h4>
+            <p class="text-gray-400 text-sm">Static website designs</p>
+          </div>
+        </div>
       </div>
 
-      <div class="card" data-title="javascript projects" onclick="go('html/js-projects.html')">
-        <i class="fa-brands fa-js icon"></i>
-        <h4>JavaScript Projects</h4>
+      <div class="group cursor-pointer" data-title="javascript projects" onclick="go('html/js-projects.html')">
+        <div
+          class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500">
+          </div>
+
+          <div class="relative z-10">
+            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-brands fa-js text-yellow-400"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-2">JavaScript Projects</h4>
+            <p class="text-gray-400 text-sm">Interactive applications</p>
+          </div>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <section class="skills-section">
-    <h2>💻 Tech Stack</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <i class="fab fa-html5"></i>
-        <span>HTML5</span>
+  <!-- Tech Stack Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+    <h2
+      class="text-3xl sm:text-4xl font-bold text-center text-white mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+      💻 Tech Stack
+    </h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div
+        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-orange-400/50 hover:shadow-xl hover:shadow-orange-500/30">
+        <i
+          class="fab fa-html5 text-5xl text-orange-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+        <span class="text-white font-semibold block">HTML5</span>
       </div>
-      <div class="skill-card">
-        <i class="fab fa-css3-alt"></i>
-        <span>CSS3</span>
+
+      <div
+        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-blue-400/50 hover:shadow-xl hover:shadow-blue-500/30">
+        <i
+          class="fab fa-css3-alt text-5xl text-blue-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+        <span class="text-white font-semibold block">CSS3</span>
       </div>
-      <div class="skill-card">
-        <i class="fab fa-js"></i>
-        <span>JavaScript</span>
+
+      <div
+        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-yellow-400/50 hover:shadow-xl hover:shadow-yellow-500/30">
+        <i class="fab fa-js text-5xl text-yellow-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+        <span class="text-white font-semibold block">JavaScript</span>
       </div>
-      <div class="skill-card">
-        <i class="fab fa-react"></i>
-        <span>React</span>
+
+      <div
+        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/30">
+        <i class="fab fa-css3 text-5xl text-cyan-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+        <span class="text-white font-semibold block">Tailwind CSS</span>
       </div>
-      <div class="skill-card">
-        <i class="fab fa-node"></i>
-        <span>Node.js</span>
+
+      <div
+        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-green-400/50 hover:shadow-xl hover:shadow-green-500/30">
+        <i class="fab fa-node text-5xl text-green-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+        <span class="text-white font-semibold block">Node.js</span>
       </div>
-      <div class="skill-card">
-        <i class="fab fa-git-alt"></i>
-        <span>Git</span>
+
+      <div
+        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-red-400/50 hover:shadow-xl hover:shadow-red-500/30">
+        <i
+          class="fab fa-git-alt text-5xl text-red-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+        <span class="text-white font-semibold block">Git</span>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2026 Aditya Kumar | Built with 💙</p>
+  <!-- Footer -->
+  <footer class="bg-black/30 backdrop-blur-lg border-t border-purple-400/20 py-6 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-gray-300 text-center sm:text-left text-base">
+          © 2026 <span class="text-purple-500 font-semibold">Aditya Kumar</span> | Built with <span
+            class="text-red-500 animate-pulse">💙</span>
+        </p>
 
-    <div class="footer-icons">
-      <a href="https://github.com/debug-node" target="_blank" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
+        <div class="flex gap-4">
+          <a href="https://github.com/debug-node" target="_blank"
+            class="text-gray-400 hover:text-white transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(147,51,234,0.7)]"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github text-2xl"></i>
+          </a>
 
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
+          <a href="https://linkedin.com" target="_blank"
+            class="text-gray-400 hover:text-blue-400 transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.7)]"
+            aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin text-2xl"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
