@@ -8,6 +8,37 @@ function openCode(url) {
   window.open(url, "_blank");
 }
 
+/* Render category cards (home page) */
+function renderCategories(list) {
+  const container = document.getElementById("categories");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  list.forEach(cat => {
+    const card = document.createElement("div");
+    card.className = "group cursor-pointer";
+    card.dataset.title = cat.dataTitle;
+    card.onclick = () => go(cat.url);
+
+    card.innerHTML = `
+      <div class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
+        <div class="absolute inset-0 bg-gradient-to-br ${cat.gradientFrom} ${cat.gradientTo} opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500"></div>
+        
+        <div class="relative z-10">
+          <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+            <i class="${cat.icon} ${cat.iconColor}"></i>
+          </div>
+          <h4 class="text-2xl font-bold text-white mb-2">${cat.title}</h4>
+          <p class="text-gray-400 text-sm">${cat.desc}</p>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
 /* Render projects (used in project pages) */
 function renderProjects(list) {
   const container = document.getElementById("projects");
@@ -80,7 +111,19 @@ const observer = new IntersectionObserver(
 headings.forEach(h => observer.observe(h));
 
 /* Initialize on page load */
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  // Load categories on home page
+  const categoriesContainer = document.getElementById("categories");
+  if (categoriesContainer) {
+    try {
+      const res = await fetch('data/categories.json');
+      const categories = await res.json();
+      renderCategories(categories);
+    } catch (err) {
+      console.error('Failed to load categories:', err);
+    }
+  }
+
   // Trigger search to ensure cards are visible
   const searchInput = document.getElementById("search");
   if (searchInput) {
