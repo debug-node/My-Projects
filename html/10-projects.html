@@ -6,21 +6,46 @@
   <title>10 Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="style-5col.css">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
 
-  <div class="back" onclick="go('../index.html')">⬅ Back</div>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-purple-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <button onclick="go('../index.html')"
+          class="flex items-center gap-2 text-purple-300 hover:text-white transition-all duration-300 group">
+          <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+          <span class="font-semibold">Back</span>
+        </button>
 
-  <h2 class="page-title">10 JavaScript Projects</h2>
+        <h1 class="text-xl sm:text-2xl font-bold text-white">
+          10 JavaScript <span class="text-purple-400">Projects</span>
+        </h1>
 
-  <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()" />
+        <div class="w-20"></div>
+      </div>
+    </div>
+  </header>
 
-  <div class="grid" id="projects"></div>
+  <!-- Search Bar -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()"
+      class="w-full max-w-2xl mx-auto block px-6 py-3 bg-white/10 backdrop-blur-lg border border-purple-400/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300" />
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <div id="projects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-fr"></div>
+  </div>
 
   <script src="../script.js"></script>
 
@@ -29,60 +54,70 @@
       {
         title: "Age Calculator",
         icon: "fa-calculator",
+        desc: "Calculate age from birthdate",
         live: "../10 Project/Age Calculator/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project"
       },
       {
         title: "BMI Calculator",
         icon: "fa-weight-scale",
+        desc: "Body Mass Index calculator",
         live: "../10 Project/BMI Calculator/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project/BMI%20Calculator"
       },
       {
         title: "Counter App",
         icon: "fa-plus-minus",
+        desc: "Simple increment counter",
         live: "../10 Project/Counter Application/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project/Counter%20Application"
       },
       {
         title: "Loan Calculator",
         icon: "fa-hand-holding-dollar",
+        desc: "EMI & loan calculator",
         live: "../10 Project/Loan Calculator/index.html",
         code: "https://github.com/debug-node/Loan-Calculator/tree/b061354422cbfc8d162139a9ca1291ec2d6b78ff"
       },
       {
         title: "Love Calculator",
         icon: "fa-heart",
+        desc: "Check love compatibility",
         live: "../10 Project/Love Calculator/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project/Love%20Calculator"
       },
       {
         title: "Palindrome Checker",
         icon: "fa-spell-check",
+        desc: "Check palindrome words",
         live: "../10 Project/Palindrome Checker/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project/Palindrome%20Checker"
       },
       {
         title: "RGB Generator",
         icon: "fa-palette",
+        desc: "Random color generator",
         live: "../10 Project/RGB Color Generotor/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project/RGB%20Color%20Generotor"
       },
       {
         title: "Time & Date",
         icon: "fa-clock",
+        desc: "Live time and date widget",
         live: "../10 Project/Time and Date Widget/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project"
       },
       {
         title: "Tip Calculator",
         icon: "fa-receipt",
+        desc: "Calculate tips easily",
         live: "../10 Project/Tip Calculator/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project/Tip%20Calculator"
       },
       {
         title: "Unicode Character",
         icon: "fa-code",
+        desc: "Unicode character finder",
         live: "../10 Project/Unicode Character/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/10%20Project"
       }
@@ -91,20 +126,34 @@
     renderProjects(projects);
   </script>
 
-  <footer class="footer">
-    <p>© 2025 Aditya Kumar</p>
+  <!-- Footer -->
+  <footer class="bg-black/30 backdrop-blur-lg border-t border-purple-400/20 py-6 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-gray-300 text-center sm:text-left text-base">
+          © 2026 <span class="text-purple-500 font-semibold">Aditya Kumar</span> | Built with <span
+            class="text-red-500 animate-pulse">💙</span>
+        </p>
 
-    <div class="footer-icons">
-      <a href="https://github.com/debug-node" target="_blank" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
+        <div class="flex gap-4">
+          <a href="https://github.com/debug-node" target="_blank"
+            class="text-gray-400 hover:text-white transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(147,51,234,0.7)]"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github text-2xl"></i>
+          </a>
 
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
+          <a href="https://linkedin.com" target="_blank"
+            class="text-gray-400 hover:text-blue-400 transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.7)]"
+            <i class="fa-brands fa-linkedin text-2xl"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
+</body>
+
+</html>
 </body>
 
 </html>
