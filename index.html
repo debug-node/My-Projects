@@ -82,9 +82,10 @@
 
 </head>
 
-<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
-
-  <!-- Hero Section -->
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  <div class="min-h-screen flex flex-col">
+    <div class="flex-1">
+      <!-- Hero Section -->
   <header class="relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <div class="text-center">
@@ -138,77 +139,7 @@
       🤖 My Projects
     </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
-
-      <div class="group cursor-pointer" data-title="10 projects" onclick="go('html/10-projects.html')">
-        <div
-          class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500">
-          </div>
-
-          <div class="relative z-10">
-            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-              <i class="fa-solid fa-folder-open text-blue-400"></i>
-            </div>
-            <h4 class="text-2xl font-bold text-white mb-2">10 Projects</h4>
-            <p class="text-gray-400 text-sm">Collection of mini projects</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="group cursor-pointer" data-title="20 basic projects" onclick="go('html/20-projects.html')">
-        <div
-          class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500">
-          </div>
-
-          <div class="relative z-10">
-            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-              <i class="fa-solid fa-layer-group text-purple-400"></i>
-            </div>
-            <h4 class="text-2xl font-bold text-white mb-2">20 Basic Projects</h4>
-            <p class="text-gray-400 text-sm">Beginner friendly projects</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="group cursor-pointer" data-title="html css projects" onclick="go('html/html-css-projects.html')">
-        <div
-          class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500">
-          </div>
-
-          <div class="relative z-10">
-            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-              <i class="fa-brands fa-html5 text-orange-400"></i>
-            </div>
-            <h4 class="text-2xl font-bold text-white mb-2">HTML CSS Projects</h4>
-            <p class="text-gray-400 text-sm">Static website designs</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="group cursor-pointer" data-title="javascript projects" onclick="go('html/js-projects.html')">
-        <div
-          class="relative bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500">
-          </div>
-
-          <div class="relative z-10">
-            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-              <i class="fa-brands fa-js text-yellow-400"></i>
-            </div>
-            <h4 class="text-2xl font-bold text-white mb-2">JavaScript Projects</h4>
-            <p class="text-gray-400 text-sm">Interactive applications</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <div id="categories" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr"></div>
   </section>
 
   <!-- Tech Stack Section -->
@@ -259,8 +190,9 @@
       </div>
     </div>
   </section>
+    </div>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="bg-black/30 backdrop-blur-lg border-t border-purple-400/20 py-6 mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -276,7 +208,7 @@
             <i class="fa-brands fa-github text-2xl"></i>
           </a>
 
-          <a href="https://linkedin.com" target="_blank"
+          <a href="https://www.linkedin.com/in/aditya-kumar-0215942b3/" target="_blank"
             class="text-gray-400 hover:text-blue-400 transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.7)]"
             aria-label="LinkedIn">
             <i class="fa-brands fa-linkedin text-2xl"></i>
@@ -285,7 +217,7 @@
       </div>
     </div>
   </footer>
-
+  </div>
 
   <script src="script.js"></script>
 </body>
