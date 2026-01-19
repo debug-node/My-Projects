@@ -6,21 +6,46 @@
   <title>JS Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="style-5col.css">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
 
-  <div class="back" onclick="go('../index.html')">⬅ Back</div>
-  <h2 class="page-title">JavaScript Projects</h2>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-purple-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <button onclick="go('../index.html')"
+          class="flex items-center gap-2 text-purple-300 hover:text-white transition-all duration-300 group">
+          <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+          <span class="font-semibold">Back</span>
+        </button>
 
-  <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()" />
+        <h1 class="text-xl sm:text-2xl font-bold text-white">
+          JavaScript <span class="text-purple-400">Projects</span>
+        </h1>
 
+        <div class="w-20"></div>
+      </div>
+    </div>
+  </header>
 
-  <div class="grid" id="projects"></div>
+  <!-- Search Bar -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()"
+      class="w-full max-w-2xl mx-auto block px-6 py-3 bg-white/10 backdrop-blur-lg border border-purple-400/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300" />
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <div id="projects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-fr"></div>
+  </div>
 
   <script src="../script.js"></script>
 
@@ -29,72 +54,84 @@
       {
         title: "Calculator",
         icon: "fa-calculator",
+        desc: "Basic calculator app",
         live: "../Project/calculator/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/calculator"
       },
       {
         title: "Color Box",
         icon: "fa-palette",
+        desc: "Interactive color picker",
         live: "../Project/color box/colorbox.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/color%20box"
       },
       {
         title: "Cricket Game",
         icon: "fa-solid fa-baseball-bat-ball",
+        desc: "Simple cricket game",
         live: "../Project/Cricket Game/cricket.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/Cricket%20Game"
       },
       {
         title: "Dynamic Website",
         icon: "fa-globe",
+        desc: "Dynamic web content",
         live: "../Project/dynamic website/dynamicwebsite.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/dynamic%20website"
       },
       {
         title: "Factorial",
         icon: "fa-hashtag",
+        desc: "Calculate factorials",
         live: "../Project/factorial/factorial.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/factorial"
       },
       {
         title: "Guess Number",
         icon: "fa-question",
+        desc: "Number guessing game",
         live: "../Project/GuessNumber/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/GuessNumber"
       },
       {
         title: "Hacking Terminal",
         icon: "fa-terminal",
+        desc: "Hacker terminal simulator",
         live: "../Project/hacking/hackingTerminal.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/hacking"
       },
       {
         title: "Hacking Terminal",
         icon: "fa-terminal",
+        desc: "Terminal simulator v2",
         live: "../Project/hacking/index2.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/hacking"
       },
       {
         title: "Hacking Terminal",
         icon: "fa-terminal",
+        desc: "Terminal simulator v3",
         live: "../Project/hacking/index3.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/hacking"
       },
       {
         title: "Tell Me Joke",
         icon: "fa-face-laugh",
+        desc: "Random joke generator",
         live: "../Project/joke/TellMeJoke.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/Joke"
       },
       {
         title: "Myntra Bag",
         icon: "fa-bag-shopping",
+        desc: "Shopping bag interface",
         live: "../Project/Myntra bag/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/Myntra%20bag"
       },
       {
         title: "Snake Water Gun",
         icon: "fa-gamepad",
+        desc: "Classic hand game",
         live: "../Project/SnakeWaterGun/index.html",
         code: "https://github.com/debug-node/My-Projects/tree/main/Project/SnakeWaterGun"
       }
@@ -103,17 +140,29 @@
     renderProjects(projects);
   </script>
 
-  <footer class="footer">
-    <p>© 2025 Aditya Kumar</p>
+  <!-- Footer -->
+  <footer class="bg-black/30 backdrop-blur-lg border-t border-purple-400/20 py-6 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-gray-300 text-center sm:text-left text-base">
+          © 2026 <span class="text-purple-500 font-semibold">Aditya Kumar</span> | Built with <span
+            class="text-red-500 animate-pulse">💙</span>
+        </p>
 
-    <div class="footer-icons">
-      <a href="https://github.com/debug-node" target="_blank" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
+        <div class="flex gap-4">
+          <a href="https://github.com/debug-node" target="_blank"
+            class="text-gray-400 hover:text-white transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(147,51,234,0.7)]"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github text-2xl"></i>
+          </a>
 
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
+          <a href="https://linkedin.com" target="_blank"
+            class="text-gray-400 hover:text-blue-400 transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.7)]"
+            aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin text-2xl"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
