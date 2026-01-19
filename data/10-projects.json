@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Age Calculator",
+    "icon": "fa-calculator",
+    "desc": "Calculate age from birthdate",
+    "live": "../10 Project/Age Calculator/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project"
+  },
+  {
+    "title": "BMI Calculator",
+    "icon": "fa-weight-scale",
+    "desc": "Body Mass Index calculator",
+    "live": "../10 Project/BMI Calculator/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project/BMI%20Calculator"
+  },
+  {
+    "title": "Counter App",
+    "icon": "fa-plus-minus",
+    "desc": "Simple increment counter",
+    "live": "../10 Project/Counter Application/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project/Counter%20Application"
+  },
+  {
+    "title": "Loan Calculator",
+    "icon": "fa-hand-holding-dollar",
+    "desc": "EMI & loan calculator",
+    "live": "../10 Project/Loan Calculator/index.html",
+    "code": "https://github.com/debug-node/Loan-Calculator/tree/b061354422cbfc8d162139a9ca1291ec2d6b78ff"
+  },
+  {
+    "title": "Love Calculator",
+    "icon": "fa-heart",
+    "desc": "Check love compatibility",
+    "live": "../10 Project/Love Calculator/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project/Love%20Calculator"
+  },
+  {
+    "title": "Palindrome Checker",
+    "icon": "fa-spell-check",
+    "desc": "Check palindrome words",
+    "live": "../10 Project/Palindrome Checker/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project/Palindrome%20Checker"
+  },
+  {
+    "title": "RGB Generator",
+    "icon": "fa-palette",
+    "desc": "Random color generator",
+    "live": "../10 Project/RGB Color Generotor/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project/RGB%20Color%20Generotor"
+  },
+  {
+    "title": "Time & Date",
+    "icon": "fa-clock",
+    "desc": "Live time and date widget",
+    "live": "../10 Project/Time and Date Widget/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project"
+  },
+  {
+    "title": "Tip Calculator",
+    "icon": "fa-receipt",
+    "desc": "Calculate tips easily",
+    "live": "../10 Project/Tip Calculator/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project/Tip%20Calculator"
+  },
+  {
+    "title": "Unicode Character",
+    "icon": "fa-code",
+    "desc": "Unicode character finder",
+    "live": "../10 Project/Unicode Character/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10%20Project"
+  }
+]
