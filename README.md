@@ -12,8 +12,9 @@ This repository brings together multiple mini-projects and UI experiments into *
 
 - ✅ 30+ mini projects  
 - ✅ Beginner to intermediate level  
-- ✅ Clean folder structure  
-- ✅ Live-preview friendly (iframe / deploy-ready)  
+- ✅ Tailwind-styled landing page with glassmorphism  
+- ✅ Descriptions on all project cards  
+- ✅ Live-preview friendly (open in browser / Live Server)  
 - ✅ One main repo – easy maintenance  
 
 ---
@@ -23,12 +24,15 @@ This repository brings together multiple mini-projects and UI experiments into *
 ```
 My-Projects
 │
-├── 10 Project
-├── 20 Basic Project
-├── HTML-CSS-Project
-├── Project
-|── README.md
-└── index.html   (Main Portfolio Page)
+├── index.html              # Main portfolio page
+├── style.css               # Global styles
+├── script.js               # Search + routing helpers
+├── html/                   # Project listing pages (10, 20, HTML-CSS, JS)
+├── 10 Project/             # Mini projects
+├── 20 Basic Project/       # Basic projects
+├── HTML-CSS-Project/       # Pure HTML/CSS UIs
+├── Project/                # Other JS logic apps
+└── README.md
 
 ```
 ---
@@ -50,7 +54,8 @@ Each folder represents an **independent project** with its own source files.
 - **HTML5**
 - **CSS3**
 - **JavaScript (ES6+)**
-- No frameworks – pure fundamentals
+- **Tailwind CSS (CDN)**
+- **Font Awesome (icons)**
 
 ---
 
@@ -64,7 +69,7 @@ Each folder represents an **independent project** with its own source files.
 2. Open the folder in VS Code.
 
 3. Open `index.html` in your browser  
-   **OR** use Live Server extension.
+   **OR** use the Live Server extension (no build step needed—Tailwind is via CDN).
 
 4. Click on any project to see it run.
 
@@ -73,9 +78,10 @@ Each folder represents an **independent project** with its own source files.
 ## 🔗 Special Note: Loan Calculator
 
 - 📁 Path: `10 Project/Loan Calculator`
-- 🔖 This project is maintained as an **individual GitHub repository**
+- 🔖 Maintained as an **individual GitHub repository**
 - 🔗 Linked using **Git submodule**
 - 🧩 Keeps code modular & reusable
+- ⚡ If needed, initialize submodules: `git submodule update --init --recursive`
 
 ---
 
@@ -93,10 +99,10 @@ By working on these projects, you’ll understand:
 
 ## 🌱 Future Improvements
 
-- Add project descriptions dynamically
-- Auto-generate project list using JavaScript
-- Add live demo links
-- Improve UI of main portfolio page
+- Generate project lists from a JSON source
+- Add live demo links per project
+- Add light/dark theme toggle
+- Bundle optional local Tailwind build (for offline use / custom @apply)
 
 ---
 
