@@ -17,15 +17,28 @@ function renderProjects(list) {
 
   list.forEach(p => {
     const card = document.createElement("div");
-    card.className = "card";
+    card.className = "group cursor-pointer";
     card.dataset.title = p.title.toLowerCase();
 
     card.innerHTML = `
-      <i class="fa-solid ${p.icon} icon"></i>
-      <h4>${p.title}</h4>
-      <div class="card-btns">
-        <button class="live-btn">Live</button>
-        <button class="code-btn">Code</button>
+      <div class="relative h-full bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 transform transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/30">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500"></div>
+        
+        <div class="relative z-10 flex flex-col h-full">
+          <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid ${p.icon} text-purple-400"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">${p.title}</h4>
+          ${p.desc ? `<p class="text-gray-400 text-sm mb-4 flex-grow">${p.desc}</p>` : '<div class="flex-grow"></div>'}
+          <div class="flex gap-3 mt-auto">
+            <button class="live-btn flex-1 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50">
+              Live
+            </button>
+            <button class="code-btn flex-1 px-4 py-2 border-2 border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Code
+            </button>
+          </div>
+        </div>
       </div>
     `;
 
@@ -43,7 +56,7 @@ function searchProjects() {
   if (!searchInput) return; // Safety check
 
   const input = searchInput.value.toLowerCase();
-  const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll("[data-title]");
 
   cards.forEach(card => {
     const title = card.dataset.title || card.innerText.toLowerCase();
