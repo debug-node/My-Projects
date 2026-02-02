@@ -86,137 +86,140 @@
   <div class="min-h-screen flex flex-col">
     <div class="flex-1">
       <!-- Hero Section -->
-  <header class="relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-      <div class="text-center">
+      <header class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div class="text-center">
 
-        <h1
-          class="text-4xl sm:text-5xl font-bold text-white mb-4 inline-flex items-center gap-3 justify-center flex-wrap">
-          <span class="wave-hand text-4xl sm:text-5xl">👋</span>
-          <span
-            class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient">
-            Hi, I'm Aditya
-          </span>
-        </h1>
+            <h1
+              class="text-4xl sm:text-5xl font-bold text-white mb-4 inline-flex items-center gap-3 justify-center flex-wrap">
+              <span class="wave-hand text-4xl sm:text-5xl">👋</span>
+              <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient">
+                Hi, I'm Aditya
+              </span>
+            </h1>
 
-        <p class="text-lg sm:text-xl text-slate-200 mb-8 h-8">
-          <span class="typing-text text-white-200"></span><span class="cursor text-pink-300 animate-pulse">|</span>
-        </p>
+            <p class="text-lg sm:text-xl text-slate-200 mb-8 h-8">
+              <span class="typing-text text-white-200"></span><span class="cursor text-pink-300 animate-pulse">|</span>
+            </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="https://github.com/debug-node" target="_blank"
-            class="group relative px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
-            <span class="relative z-10 flex items-center gap-2">
-              <i class="fab fa-github"></i>
-              GitHub
-            </span>
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="https://github.com/debug-node" target="_blank"
+                class="group relative px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
+                <span class="relative z-10 flex items-center gap-2">
+                  <i class="fab fa-github"></i>
+                  GitHub
+                </span>
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+                </div>
+              </a>
+
+              <a href="#projects"
+                class="px-6 py-3 border-2 border-purple-400 text-purple-300 font-semibold rounded-full hover:bg-purple-400 hover:text-white transition-all duration-300 hover:scale-105">
+                View Projects
+              </a>
             </div>
-          </a>
+          </div>
+        </div>
+      </header>
 
-          <a href="#projects"
-            class="px-6 py-3 border-2 border-purple-400 text-purple-300 font-semibold rounded-full hover:bg-purple-400 hover:text-white transition-all duration-300 hover:scale-105">
-            View Projects
-          </a>
+      <!-- Search Bar -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="relative max-w-2xl mx-auto">
+          <input type="text" id="search" placeholder="🔍 Search categories..." onkeyup="searchProjects()"
+            class="w-full px-6 py-3 bg-white/10 backdrop-blur-lg border border-purple-400/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300" />
         </div>
       </div>
-    </div>
-  </header>
 
-  <!-- Search Bar -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="relative max-w-2xl mx-auto">
-      <input type="text" id="search" placeholder="🔍 Search categories..." onkeyup="searchProjects()"
-        class="w-full px-6 py-3 bg-white/10 backdrop-blur-lg border border-purple-400/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300" />
-    </div>
-  </div>
+      <!-- Projects Section -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20" id="projects">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center text-white mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+          🤖 My Projects
+        </h2>
 
-  <!-- Projects Section -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20" id="projects">
-    <h2
-      class="text-3xl sm:text-4xl font-bold text-center text-white mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-      🤖 My Projects
-    </h2>
+        <div id="categories" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr"></div>
+      </section>
 
-    <div id="categories" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr"></div>
-  </section>
+      <!-- Tech Stack Section -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center text-white mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+          💻 Tech Stack
+        </h2>
 
-  <!-- Tech Stack Section -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-    <h2
-      class="text-3xl sm:text-4xl font-bold text-center text-white mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-      💻 Tech Stack
-    </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div
+            class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-orange-400/50 hover:shadow-xl hover:shadow-orange-500/30">
+            <i
+              class="fab fa-html5 text-5xl text-orange-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+            <span class="text-white font-semibold block">HTML5</span>
+          </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-      <div
-        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-orange-400/50 hover:shadow-xl hover:shadow-orange-500/30">
-        <i
-          class="fab fa-html5 text-5xl text-orange-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
-        <span class="text-white font-semibold block">HTML5</span>
-      </div>
+          <div
+            class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-blue-400/50 hover:shadow-xl hover:shadow-blue-500/30">
+            <i
+              class="fab fa-css3-alt text-5xl text-blue-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+            <span class="text-white font-semibold block">CSS3</span>
+          </div>
 
-      <div
-        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-blue-400/50 hover:shadow-xl hover:shadow-blue-500/30">
-        <i
-          class="fab fa-css3-alt text-5xl text-blue-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
-        <span class="text-white font-semibold block">CSS3</span>
-      </div>
+          <div
+            class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-yellow-400/50 hover:shadow-xl hover:shadow-yellow-500/30">
+            <i
+              class="fab fa-js text-5xl text-yellow-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+            <span class="text-white font-semibold block">JavaScript</span>
+          </div>
 
-      <div
-        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-yellow-400/50 hover:shadow-xl hover:shadow-yellow-500/30">
-        <i class="fab fa-js text-5xl text-yellow-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
-        <span class="text-white font-semibold block">JavaScript</span>
-      </div>
+          <div
+            class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/30">
+            <i
+              class="fab fa-css3 text-5xl text-cyan-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+            <span class="text-white font-semibold block">Tailwind CSS</span>
+          </div>
 
-      <div
-        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/30">
-        <i class="fab fa-css3 text-5xl text-cyan-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
-        <span class="text-white font-semibold block">Tailwind CSS</span>
-      </div>
+          <div
+            class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-green-400/50 hover:shadow-xl hover:shadow-green-500/30">
+            <i
+              class="fab fa-node text-5xl text-green-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+            <span class="text-white font-semibold block">Node.js</span>
+          </div>
 
-      <div
-        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-green-400/50 hover:shadow-xl hover:shadow-green-500/30">
-        <i class="fab fa-node text-5xl text-green-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
-        <span class="text-white font-semibold block">Node.js</span>
-      </div>
-
-      <div
-        class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-red-400/50 hover:shadow-xl hover:shadow-red-500/30">
-        <i
-          class="fab fa-git-alt text-5xl text-red-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
-        <span class="text-white font-semibold block">Git</span>
-      </div>
-    </div>
-  </section>
+          <div
+            class="group bg-white/5 backdrop-blur-lg border border-purple-400/20 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-red-400/50 hover:shadow-xl hover:shadow-red-500/30">
+            <i
+              class="fab fa-git-alt text-5xl text-red-400 mb-4 group-hover:scale-125 transition-transform duration-300"></i>
+            <span class="text-white font-semibold block">Git</span>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- Footer -->
-  <footer class="bg-black/30 backdrop-blur-lg border-t border-purple-400/20 py-6 mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-gray-300 text-center sm:text-left text-base">
-          © 2026 <span class="text-purple-500 font-semibold">Aditya Kumar</span> | Built with <span
-            class="text-red-500 animate-pulse">💙</span>
-        </p>
+    <footer class="bg-black/30 backdrop-blur-lg border-t border-purple-400/20 py-6 mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-gray-300 text-center sm:text-left text-base">
+            © 2026 <span class="text-purple-500 font-semibold">Aditya Kumar</span> | Built with <span
+              class="text-red-500 animate-pulse">💙</span>
+          </p>
 
-        <div class="flex gap-4">
-          <a href="https://github.com/debug-node" target="_blank"
-            class="text-gray-400 hover:text-white transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(147,51,234,0.7)]"
-            aria-label="GitHub">
-            <i class="fa-brands fa-github text-2xl"></i>
-          </a>
+          <div class="flex gap-4">
+            <a href="https://github.com/debug-node" target="_blank"
+              class="text-gray-400 hover:text-white transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(147,51,234,0.7)]"
+              aria-label="GitHub">
+              <i class="fa-brands fa-github text-2xl"></i>
+            </a>
 
-          <a href="https://www.linkedin.com/in/aditya-kumar-0215942b3/" target="_blank"
-            class="text-gray-400 hover:text-blue-400 transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.7)]"
-            aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin text-2xl"></i>
-          </a>
+            <a href="https://www.linkedin.com/in/aditya-kumar-0215942b3/" target="_blank"
+              class="text-gray-400 hover:text-blue-400 transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.7)]"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin text-2xl"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   </div>
 
   <script src="script.js"></script>
