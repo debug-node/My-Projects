@@ -26,12 +26,13 @@ My-Projects
 │
 ├── index.html              # Main portfolio page
 ├── style.css               # Global styles
-├── script.js               # Search + routing helpers
+├── script.js               # Search + routing helpers & data loader
 ├── html/                   # Project listing pages (10, 20, HTML-CSS, JS)
-├── 10-project/             # Mini projects (kebab-case)
-├── 20-basic-project/       # Basic projects (kebab-case)
-├── html-css-project/       # Pure HTML/CSS UIs (kebab-case)
-├── other-projects/         # JavaScript logic apps (kebab-case)
+├── data/                   # JSON data files with project metadata
+├── 10-project/             # 10 Mini projects
+├── 20-basic-project/       # 20 Beginner-friendly projects
+├── HTML-CSS-Project/       # 16 Pure HTML/CSS UI projects
+├── other-projects/         # 12 JavaScript logic apps
 └── README.md
 
 ```
@@ -77,7 +78,7 @@ Each folder represents an **independent project** with its own source files.
 
 ## 🔗 Special Note: Loan Calculator
 
-- 📁 Path: `10 Project/Loan Calculator`
+- 📁 Path: `10-project/Loan-Calculator`
 - 🔖 Maintained as an **individual GitHub repository**
 - 🔗 Linked using **Git submodule**
 - 🧩 Keeps code modular & reusable
@@ -97,12 +98,14 @@ By working on these projects, you’ll understand:
 
 ---
 
-## 🌱 Future Improvements
+## 🌱 Features Implemented
 
-- Generate project lists from a JSON source
-- Add live demo links per project
-- Add light/dark theme toggle
-- Bundle optional local Tailwind build (for offline use / custom @apply)
+- ✅ **Dynamic JSON-driven project system** – All projects listed from JSON data
+- ✅ **Live project links** – Direct links to each project
+- ✅ **Search functionality** – Filter projects by name
+- ✅ **GitHub code links** – Quick access to project source code
+- ✅ **Responsive design** – Works on all devices
+- ✅ **Deployed on Vercel** – [View Live](https://my-projects-debug.vercel.app/)
 
 ---
 
