@@ -59,7 +59,7 @@
     "title": "Media 1.1",
     "icon": "fa-photo-film",
     "desc": "Basic media gallery",
-    "live": "../html-css-project/media/media basic.html",
+    "live": "../html-css-project/media/media-basic.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/media"
   },
   {

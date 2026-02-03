@@ -45,8 +45,8 @@
     "title": "RGB Generator",
     "icon": "fa-palette",
     "desc": "Random color generator",
-    "live": "../10-project/RGB-Color-Generotor/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/10-project/RGB-Color-Generotor"
+    "live": "../10-project/RGB-Color-Generator/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/10-project/RGB-Color-Generator"
   },
   {
     "title": "Time & Date",
