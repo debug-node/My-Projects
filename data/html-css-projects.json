@@ -3,112 +3,112 @@
     "title": "Blog",
     "icon": "fa-blog",
     "desc": "Modern blog layout design",
-    "live": "../html-css-project/blog/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/blog"
+    "live": "../HTML-CSS-Project/blog/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/blog"
   },
   {
     "title": "Blog 2",
     "icon": "fa-blog",
     "desc": "Alternative blog template",
-    "live": "../html-css-project/blog/int.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/blog"
+    "live": "../HTML-CSS-Project/blog/int.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/blog"
   },
   {
     "title": "Nature Card 1.1",
     "icon": "fa-leaf",
     "desc": "Nature themed card design",
-    "live": "../html-css-project/card/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/card"
+    "live": "../HTML-CSS-Project/card/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card"
   },
   {
     "title": "Nature Card 1.2",
     "icon": "fa-leaf",
     "desc": "Nature card variation",
-    "live": "../html-css-project/card/index2.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/card"
+    "live": "../HTML-CSS-Project/card/index2.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card"
   },
   {
     "title": "Business Card 2.1",
     "icon": "fa-id-card",
     "desc": "Professional card layout",
-    "live": "../html-css-project/card2/card.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/card2"
+    "live": "../HTML-CSS-Project/card2/card.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card2"
   },
   {
     "title": "Business Card 2.2",
     "icon": "fa-id-card",
     "desc": "Business card design 1",
-    "live": "../html-css-project/card2/one.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/card2"
+    "live": "../HTML-CSS-Project/card2/one.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card2"
   },
   {
     "title": "Business Card 2.3",
     "icon": "fa-id-card",
     "desc": "Business card design 2",
-    "live": "../html-css-project/card2/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/card2"
+    "live": "../HTML-CSS-Project/card2/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card2"
   },
   {
     "title": "Business Card 2.4",
     "icon": "fa-id-card-clip",
     "desc": "Swipeable card design",
-    "live": "../html-css-project/card2/swipeCard.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/card2"
+    "live": "../HTML-CSS-Project/card2/swipeCard.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/card2"
   },
   {
     "title": "Media 1.1",
     "icon": "fa-photo-film",
     "desc": "Basic media gallery",
-    "live": "../html-css-project/media/media-basic.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/media"
+    "live": "../HTML-CSS-Project/media/media-basic.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/media"
   },
   {
     "title": "Media 1.2",
     "icon": "fa-photo-film",
     "desc": "Advanced media layout",
-    "live": "../html-css-project/media/Media.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/media"
+    "live": "../HTML-CSS-Project/media/Media.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/media"
   },
   {
     "title": "Resume",
     "icon": "fa-file-lines",
     "desc": "Professional resume design",
-    "live": "../html-css-project/media/Resume.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/media"
+    "live": "../HTML-CSS-Project/media/Resume.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/media"
   },
   {
     "title": "Netflix Clone",
     "icon": "fa-solid fa-n",
     "desc": "Netflix homepage clone",
-    "live": "../html-css-project/netflix-clone/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/netflix-clone"
+    "live": "../HTML-CSS-Project/netflix-clone/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/netflix-clone"
   },
   {
     "title": "Product",
     "icon": "fa-box",
     "desc": "Product showcase page",
-    "live": "../html-css-project/product/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/product"
+    "live": "../HTML-CSS-Project/product/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/product"
   },
   {
     "title": "Product 2",
     "icon": "fa-box-open",
     "desc": "Alternative product design",
-    "live": "../html-css-project/product/index2.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/product"
+    "live": "../HTML-CSS-Project/product/index2.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/product"
   },
   {
     "title": "Recipe",
     "icon": "fa-utensils",
     "desc": "Recipe card layout",
-    "live": "../html-css-project/reciepi/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/reciepi"
+    "live": "../HTML-CSS-Project/reciepi/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/reciepi"
   },
   {
     "title": "StudySync",
     "icon": "fa-graduation-cap",
     "desc": "Educational platform UI",
-    "live": "../html-css-project/Studysync/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/html-css-project/Studysync"
+    "live": "../HTML-CSS-Project/Studysync/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/Studysync"
   }
 ]

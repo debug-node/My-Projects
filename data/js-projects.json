@@ -17,8 +17,8 @@
     "title": "Cricket Game",
     "icon": "fa-solid fa-baseball-bat-ball",
     "desc": "Simple cricket game",
-    "live": "../other-projects/Cricket-game/cricket.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/Cricket-game"
+    "live": "../other-projects/Cricket-Game/cricket.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/Cricket-Game"
   },
   {
     "title": "Dynamic Website",
@@ -73,8 +73,8 @@
     "title": "Myntra Bag",
     "icon": "fa-bag-shopping",
     "desc": "Shopping bag interface",
-    "live": "../other-projects/myntra-bag/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/myntra-bag"
+    "live": "../other-projects/Myntra-bag/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/Myntra-bag"
   },
   {
     "title": "Snake Water Gun",
