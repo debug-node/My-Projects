@@ -3,140 +3,140 @@
     "title": "Key Code",
     "icon": "fa-keyboard",
     "desc": "Display keyboard codes",
-    "live": "../20 Basic Project/1 Key Code/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/1%20Key%20Code"
+    "live": "../20-basic-project/1-Key-Code/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/1-Key-Code"
   },
   {
     "title": "Drop Animation",
     "icon": "fa-water",
     "desc": "Water drop animation effect",
-    "live": "../20 Basic Project/2 Drop Animation/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/2%20Drop%20Animation"
+    "live": "../20-basic-project/2-Drop-Animation/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/2-Drop-Animation"
   },
   {
     "title": "Name Tag Sticker",
     "icon": "fa-id-badge",
     "desc": "Generate name tags",
-    "live": "../20 Basic Project/3 Name Tag Sticker/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/3%20Name%20Tag%20Sticker"
+    "live": "../20-basic-project/3-Name-Tag-Sticker/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/3-Name-Tag-Sticker"
   },
   {
     "title": "Coin Flip",
     "icon": "fa-coins",
     "desc": "Flip a coin game",
-    "live": "../20 Basic Project/4 Coin Flip Application/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/4%20Coin%20Flip%20Application"
+    "live": "../20-basic-project/4-Coin-Flip-Application/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/4-Coin-Flip-Application"
   },
   {
     "title": "Smoke Effect",
     "icon": "fa-smog",
     "desc": "Smoke animation effect",
-    "live": "../20 Basic Project/5 Smoke Effect/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/5%20Smoke%20Effect"
+    "live": "../20-basic-project/5-Smoke-Effect/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/5-Smoke-Effect"
   },
   {
     "title": "Timeline",
     "icon": "fa-timeline",
     "desc": "Vertical timeline layout",
-    "live": "../20 Basic Project/6 Timeline Project/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/6%20Timeline%20Project"
+    "live": "../20-basic-project/6-Timeline-Project/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/6-Timeline-Project"
   },
   {
     "title": "Drag & Drop",
     "icon": "fa-hand-pointer",
     "desc": "Drag and drop elements",
-    "live": "../20 Basic Project/7 Drag and Drop/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/7%20Drag%20and%20Drop"
+    "live": "../20-basic-project/7-Drag-and-Drop/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/7-Drag-and-Drop"
   },
   {
     "title": "Temperature Converter",
     "icon": "fa-temperature-half",
     "desc": "Convert temperature units",
-    "live": "../20 Basic Project/8 Temperature Converter/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/8%20Temperature%20Converter"
+    "live": "../20-basic-project/8-Temperature-Converter/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/8-Temperature-Converter"
   },
   {
     "title": "Visible Letters",
     "icon": "fa-eye",
     "desc": "Click to reveal letters",
-    "live": "../20 Basic Project/9 Click to Visible Letters/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/9%20Click%20to%20Visible%20Letters"
+    "live": "../20-basic-project/9-Click-to-Visible-Letters/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/9-Click-to-Visible-Letters"
   },
   {
     "title": "Copy Clipboard",
     "icon": "fa-copy",
     "desc": "Copy text to clipboard",
-    "live": "../20 Basic Project/10 Click to Copy Clipboard/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/10%20Click%20to%20Copy%20Clipboard"
+    "live": "../20-basic-project/10-Click-to-Copy-Clipboard/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/10-Click-to-Copy-Clipboard"
   },
   {
     "title": "BG Slider",
     "icon": "fa-sliders",
     "desc": "Change background color",
-    "live": "../20 Basic Project/11 Slider to Change BG Color/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/11%20Slider%20to%20Change%20BG%20Color"
+    "live": "../20-basic-project/11-Slider-to-Change-BG-Color/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/11-Slider-to-Change-BG-Color"
   },
   {
     "title": "Shape Animation",
     "icon": "fa-shapes",
     "desc": "Animated CSS shapes",
-    "live": "../20 Basic Project/12 Shape animation project/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/12%20Shape%20animation%20project"
+    "live": "../20-basic-project/12-Shape-animation-project/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/12-Shape-animation-project"
   },
   {
     "title": "Testimonial",
     "icon": "fa-comments",
     "desc": "Customer testimonial slider",
-    "live": "../20 Basic Project/13 Testimonial Application/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/13%20Testimonial%20Application"
+    "live": "../20-basic-project/13-Testimonial-Application/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/13-Testimonial-Application"
   },
   {
     "title": "Icon Hover",
     "icon": "fa-icons",
     "desc": "Icon hover effects",
-    "live": "../20 Basic Project/14 Icon Hover Effect/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/14%20Icon%20Hover%20Effect"
+    "live": "../20-basic-project/14-Icon-Hover-Effect/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/14-Icon-Hover-Effect"
   },
   {
     "title": "Navbar",
     "icon": "fa-bars",
     "desc": "Responsive navigation bar",
-    "live": "../20 Basic Project/15 Navbar Project/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/15%20Navbar%20Project"
+    "live": "../20-basic-project/15-Navbar-Project/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/15-Navbar-Project"
   },
   {
     "title": "Cash Calculator",
     "icon": "fa-cash-register",
     "desc": "Calculate cash amounts",
-    "live": "../20 Basic Project/16 Cash Calculator Application/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/16%20Cash%20Calculator%20Application"
+    "live": "../20-basic-project/16-Cash-Calculator-Application/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/16-Cash-Calculator-Application"
   },
   {
     "title": "Poll System",
     "icon": "fa-square-poll-horizontal",
     "desc": "Interactive polling system",
-    "live": "../20 Basic Project/17 Poll System Application/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/17%20Poll%20System%20Application"
+    "live": "../20-basic-project/17-Poll-System-Application/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/17-Poll-System-Application"
   },
   {
     "title": "Password Generator",
     "icon": "fa-lock",
     "desc": "Generate secure passwords",
-    "live": "../20 Basic Project/18 Random password Generator/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/18%20Random%20password%20Generator"
+    "live": "../20-basic-project/18-Random-password-Generator/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/18-Random-password-Generator"
   },
   {
     "title": "Stopwatch",
     "icon": "fa-stopwatch",
     "desc": "Digital stopwatch timer",
-    "live": "../20 Basic Project/19 Stopwatch Timer Application/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/19%20Stopwatch%20Timer%20Application"
+    "live": "../20-basic-project/19-Stopwatch-Timer-Application/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/19-Stopwatch-Timer-Application"
   },
   {
     "title": "Vowel Counter",
     "icon": "fa-font",
     "desc": "Count vowels in text",
-    "live": "../20 Basic Project/20 Project Vowel Counter/index.html",
-    "code": "https://github.com/debug-node/My-Projects/tree/main/20%20Basic%20Project/20%20Project%20Vowel%20Counter"
+    "live": "../20-basic-project/20-Project-Vowel-Counter/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/20-basic-project/20-Project-Vowel-Counter"
   }
 ]
