@@ -28,10 +28,10 @@ My-Projects
 ├── style.css               # Global styles
 ├── script.js               # Search + routing helpers
 ├── html/                   # Project listing pages (10, 20, HTML-CSS, JS)
-├── 10 Project/             # Mini projects
-├── 20 Basic Project/       # Basic projects
-├── HTML-CSS-Project/       # Pure HTML/CSS UIs
-├── Project/                # Other JS logic apps
+├── 10-project/             # Mini projects (kebab-case)
+├── 20-basic-project/       # Basic projects (kebab-case)
+├── html-css-project/       # Pure HTML/CSS UIs (kebab-case)
+├── other-projects/         # JavaScript logic apps (kebab-case)
 └── README.md
 
 ```
