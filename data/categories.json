@@ -1,42 +1,42 @@
 [
   {
-    "title": "10 Projects",
-    "desc": "Collection of mini projects",
+    "title": "Mini Projects",
+    "desc": "Collection of small calculators, generators & utilities",
     "icon": "fa-solid fa-folder-open",
     "iconColor": "text-blue-400",
     "gradientFrom": "from-blue-500/20",
     "gradientTo": "to-purple-600/20",
     "url": "html/10-projects.html",
-    "dataTitle": "10 projects"
+    "dataTitle": "mini projects"
   },
   {
-    "title": "20 Basic Projects",
-    "desc": "Beginner friendly projects",
+    "title": "Beginner Projects",
+    "desc": "Fundamentals & core JavaScript concepts",
     "icon": "fa-solid fa-layer-group",
     "iconColor": "text-purple-400",
     "gradientFrom": "from-purple-500/20",
     "gradientTo": "to-pink-600/20",
     "url": "html/20-projects.html",
-    "dataTitle": "20 basic projects"
+    "dataTitle": "beginner projects"
   },
   {
-    "title": "HTML CSS Projects",
-    "desc": "Static website designs",
+    "title": "UI/UX Designs",
+    "desc": "Pure HTML & CSS static website components",
     "icon": "fa-brands fa-html5",
     "iconColor": "text-orange-400",
     "gradientFrom": "from-orange-500/20",
     "gradientTo": "to-red-600/20",
     "url": "html/html-css-projects.html",
-    "dataTitle": "html css projects"
+    "dataTitle": "ui ux designs"
   },
   {
-    "title": "JavaScript Projects",
-    "desc": "Interactive applications",
+    "title": "Logic Apps",
+    "desc": "JavaScript applications with advanced logic",
     "icon": "fa-brands fa-js",
     "iconColor": "text-yellow-400",
     "gradientFrom": "from-yellow-500/20",
     "gradientTo": "to-orange-600/20",
     "url": "html/js-projects.html",
-    "dataTitle": "javascript projects"
+    "dataTitle": "logic applications"
   }
 ]
