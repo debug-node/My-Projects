@@ -6,7 +6,7 @@
     "iconColor": "text-blue-400",
     "gradientFrom": "from-blue-500/20",
     "gradientTo": "to-purple-600/20",
-    "url": "html/10-projects.html",
+    "url": "/html/10-projects.html",
     "dataTitle": "mini projects"
   },
   {
@@ -16,7 +16,7 @@
     "iconColor": "text-purple-400",
     "gradientFrom": "from-purple-500/20",
     "gradientTo": "to-pink-600/20",
-    "url": "html/20-projects.html",
+    "url": "/html/20-projects.html",
     "dataTitle": "beginner projects"
   },
   {
@@ -26,7 +26,7 @@
     "iconColor": "text-orange-400",
     "gradientFrom": "from-orange-500/20",
     "gradientTo": "to-red-600/20",
-    "url": "html/html-css-projects.html",
+    "url": "/html/html-css-projects.html",
     "dataTitle": "ui ux designs"
   },
   {
@@ -36,7 +36,7 @@
     "iconColor": "text-yellow-400",
     "gradientFrom": "from-yellow-500/20",
     "gradientTo": "to-orange-600/20",
-    "url": "html/js-projects.html",
+    "url": "/html/js-projects.html",
     "dataTitle": "logic applications"
   }
 ]

@@ -53,7 +53,7 @@
 
       <script>
         async function init() {
-          const res = await fetch('../data/js-projects.json');
+          const res = await fetch('/data/js-projects.json');
           const projects = await res.json();
           renderProjects(projects);
         }

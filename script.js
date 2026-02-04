@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const categoriesContainer = document.getElementById("categories");
   if (categoriesContainer) {
     try {
-      const res = await fetch('data/categories.json');
+      const res = await fetch('/data/categories.json');
       const categories = await res.json();
       renderCategories(categories);
     } catch (err) {

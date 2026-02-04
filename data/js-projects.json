@@ -3,84 +3,84 @@
     "title": "Calculator",
     "icon": "fa-calculator",
     "desc": "Basic calculator app",
-    "live": "../other-projects/calculator/index.html",
+    "live": "/other-projects/calculator/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/calculator"
   },
   {
     "title": "Color Box",
     "icon": "fa-palette",
     "desc": "Interactive color picker",
-    "live": "../other-projects/color-box/colorbox.html",
+    "live": "/other-projects/color-box/colorbox.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/color-box"
   },
   {
     "title": "Cricket Game",
     "icon": "fa-solid fa-baseball-bat-ball",
     "desc": "Simple cricket game",
-    "live": "../other-projects/Cricket-Game/cricket.html",
+    "live": "/other-projects/Cricket-Game/cricket.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/Cricket-Game"
   },
   {
     "title": "Dynamic Website",
     "icon": "fa-globe",
     "desc": "Dynamic web content",
-    "live": "../other-projects/dynamic-website/dynamicwebsite.html",
+    "live": "/other-projects/dynamic-website/dynamicwebsite.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/dynamic-website"
   },
   {
     "title": "Factorial",
     "icon": "fa-hashtag",
     "desc": "Calculate factorials",
-    "live": "../other-projects/factorial/factorial.html",
+    "live": "/other-projects/factorial/factorial.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/factorial"
   },
   {
     "title": "Guess Number",
     "icon": "fa-question",
     "desc": "Number guessing game",
-    "live": "../other-projects/Guess-number/index.html",
+    "live": "/other-projects/Guess-number/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/Guess-number"
   },
   {
     "title": "Hacking Terminal",
     "icon": "fa-terminal",
     "desc": "Hacker terminal simulator",
-    "live": "../other-projects/hacking/hackingTerminal.html",
+    "live": "/other-projects/hacking/hackingTerminal.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/hacking"
   },
   {
     "title": "Hacking Terminal",
     "icon": "fa-terminal",
     "desc": "Terminal simulator v2",
-    "live": "../other-projects/hacking/index2.html",
+    "live": "/other-projects/hacking/index2.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/hacking"
   },
   {
     "title": "Hacking Terminal",
     "icon": "fa-terminal",
     "desc": "Terminal simulator v3",
-    "live": "../other-projects/hacking/index3.html",
+    "live": "/other-projects/hacking/index3.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/hacking"
   },
   {
     "title": "Tell Me Joke",
     "icon": "fa-face-laugh",
     "desc": "Random joke generator",
-    "live": "../other-projects/joke/TellMeJoke.html",
+    "live": "/other-projects/joke/TellMeJoke.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/joke"
   },
   {
     "title": "Myntra Bag",
     "icon": "fa-bag-shopping",
     "desc": "Shopping bag interface",
-    "live": "../other-projects/Myntra-bag/index.html",
+    "live": "/other-projects/Myntra-bag/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/Myntra-bag"
   },
   {
     "title": "Snake Water Gun",
     "icon": "fa-gamepad",
     "desc": "Classic hand game",
-    "live": "../other-projects/Snake-water-gun/index.html",
+    "live": "/other-projects/Snake-water-gun/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/Snake-water-gun"
   }
 ]
