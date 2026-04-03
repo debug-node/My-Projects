@@ -82,5 +82,12 @@
     "desc": "Classic hand game",
     "live": "/other-projects/Snake-water-gun/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/Snake-water-gun"
+  },
+  {
+    "title": "Pie in the Sky Bakery",
+    "icon": "fa-bread-slice",
+    "desc": "Multi-page bakery website with accordion UI",
+    "live": "/other-projects/bakery-website/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/bakery-website"
   }
 ]
