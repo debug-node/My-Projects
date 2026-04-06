@@ -110,5 +110,12 @@
     "desc": "Educational platform UI",
     "live": "/HTML-CSS-Project/Studysync/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/Studysync"
+  },
+  {
+    "title": "Alien Blog Layout",
+    "icon": "fa-newspaper",
+    "desc": "Blog layout UI",
+    "live": "/HTML-CSS-Project/blog-layout/blog.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/blog-layout"
   }
 ]
