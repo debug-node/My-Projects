@@ -86,14 +86,14 @@
   {
     "title": "Pie in the Sky Bakery",
     "icon": "fa-bread-slice",
-    "desc": "Multi-page bakery website with accordion UI",
+    "desc": "Bakery website UI",
     "live": "/other-projects/bakery-website/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/bakery-website"
   },
   {
     "title": "Demo Website",
     "icon": "fa-compass-drafting",
-    "desc": "Multi-page demo site with particles and extra challenge page",
+    "desc": "Multi-page demo site",
     "live": "/other-projects/demo/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/other-projects/demo"
   }
