@@ -117,5 +117,12 @@
     "desc": "Blog layout UI",
     "live": "/HTML-CSS-Project/blog-layout/blog.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/blog-layout"
+  },
+  {
+    "title": "Das Grune Webpage",
+    "icon": "fa-solid fa-align-justify",
+    "desc": "Dashboard design",
+    "live": "/HTML-CSS-Project/Design/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/Design"
   }
 ]
