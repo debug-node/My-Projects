@@ -124,5 +124,12 @@
     "desc": "Dashboard design",
     "live": "/HTML-CSS-Project/Design/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/Design"
+  },
+  {
+    "title": "Sheryians coding school",
+    "icon": "fa-graduation-cap",
+    "desc": "Educational platform UI",
+    "live": "/HTML-CSS-Project/SCS-clone/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/SCS-clone"
   }
 ]
