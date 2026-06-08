@@ -1,0 +1,409 @@
+:root {
+  --bg: #111;
+  --muted: #9aa4b2;
+  --text: #e6eef6;
+  --gray: #212121;
+  --green: #009660;
+  --white: #e9e9e9;
+  --black: #0c0c0c;
+  --lgray: #929292;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.green {
+  color: var(--green);
+}
+
+.lgray {
+  color: var(--lgray);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 2.8rem;
+  background: rgba(97, 93, 93, 0.067);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  transition: 0.18s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: rgb(233, 98, 30);
+  transform: translateY(-1px);
+}
+
+.icon-btn {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.35rem;
+  font-size: 1.25rem;
+}
+
+.profile-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  font-size: 1.25rem;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.menu-btn:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.08);
+  outline-offset: 3px;
+}
+
+.brand img {
+  height: 35px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 520px) {
+  nav {
+    flex-wrap: wrap;
+    row-gap: 0.6rem;
+    padding: 0.6rem;
+  }
+
+  .brand {
+    flex: 1;
+  }
+
+  .nav-actions {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+
+main {
+  padding-top: 30px;
+}
+
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2.8rem;
+}
+
+.section1 .left {
+  width: 36%;
+  margin-left: 20px;
+}
+
+.section1 .left h1 {
+  font-size: 32px;
+}
+
+.section1 .left .tags {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.left .price {
+  padding-top: 18px;
+  font-size: 24px;
+}
+
+.left .price .lgray {
+  font-size: 18px;
+  text-decoration: line-through;
+}
+
+.section1 .left .tags h4 {
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  background-color: var(--gray);
+  font-weight: 600;
+}
+
+.section1 .left .cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.cta button {
+  background-color: var(--green);
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cta button:active {
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+.cta button:nth-child(2) {
+  background-color: var(--gray);
+}
+
+.section1 .left h5 {
+  font-size: 12px;
+}
+
+.section1 .left h6 {
+  font-size: 15px;
+}
+
+.section1 .right {
+  margin-right: 20px;
+}
+
+.section1 .right .right-in {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.section1 .right .right-in .image {
+  width: 100%;
+  height: 300px;
+}
+
+.section1 .right .right-in .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.section1 .right .right-in .image-bottom {
+  padding: 20px;
+  background-color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.right-in .image-bottom h4 {
+  background-color: #151515;
+  padding: 10px 12px;
+  width: 48%;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+@media (max-width: 1400px) {
+  .section1 .left h1 {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    padding-top: 10px;
+  }
+  .section1 {
+    flex-direction: column-reverse;
+    padding: 15px 4vw;
+  }
+
+  .section1 .left {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .section1 .left h1 {
+    font-size: 17px;
+  }
+
+  .section1 .right {
+    margin-right: 0px;
+  }
+
+  .section1 .right .right-in {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .section1 .right .right-in .image {
+    width: 100%;
+    height: 40vw;
+  }
+
+  .section1 .right .right-in .image-bottom {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .right-in .image-bottom h4 {
+    background-color: #151515;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  .section1 .left .tags {
+    gap: 8px;
+  }
+
+  .left .price {
+    padding-top: 10px;
+    font-size: 18px;
+  }
+
+  .left .price .lgray {
+    font-size: 13px;
+  }
+
+  .section1 .left .tags h4 {
+    padding: 4px 16px;
+    font-weight: 500;
+  }
+
+  .section1 .left .cta {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+
+  .cta button {
+    padding: 8px 40px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .section1 .left h6 {
+    font-size: 12px;
+  }
+}
+
+.section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 20px;
+}
+
+.section2 h1 {
+  font-size: 110px;
+  background-image: url(https://tse4.mm.bing.net/th/id/OIP.Pc1Zj2GZzVSZUztkbFK7agHaBL?cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3);
+  background-size: cover;
+  background-clip: text;
+  position: relative;
+  color: transparent;
+  letter-spacing: -1px;
+}
+
+.section2 h1.bloom {
+  position: absolute;
+  filter: blur(70px);
+}
+
+.section2 h3 {
+  font-size: 28px;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 800px) {
+  .section2 {
+    padding: 0px 20px;
+  }
+  .section2 h1 {
+    font-size: 70px;
+  }
+
+  .section2 h3 {
+    font-size: 18px;
+  }
+}
