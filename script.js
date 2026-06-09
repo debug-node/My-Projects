@@ -65,9 +65,9 @@ function renderProjects(list) {
             <button class="live-btn flex-1 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50">
               Live
             </button>
-            <button class="code-btn flex-1 px-4 py-2 border-2 border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+            <a href="${p.code}" target="_blank" rel="noopener noreferrer" class="code-btn flex-1 px-4 py-2 border-2 border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 text-center">
               Code
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -75,7 +75,6 @@ function renderProjects(list) {
 
     // Use event listeners instead of onclick
     card.querySelector(".live-btn").addEventListener("click", () => go(p.live));
-    card.querySelector(".code-btn").addEventListener("click", () => openCode(p.code));
 
     container.appendChild(card);
   });
