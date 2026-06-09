@@ -131,5 +131,12 @@
     "desc": "Educational platform UI",
     "live": "/HTML-CSS-Project/SCS-clone/index.html",
     "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/SCS-clone"
+  },
+  {
+    "title": "Landing Page",
+    "icon": "fa-solid fa-rocket",
+    "desc": "Website landing page design",
+    "live": "/HTML-CSS-Project/landing-page/index.html",
+    "code": "https://github.com/debug-node/My-Projects/tree/main/HTML-CSS-Project/landing-page"
   }
 ]
