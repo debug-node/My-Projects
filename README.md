@@ -22,9 +22,9 @@ This repository brings together multiple mini-projects and UI experiments into *
 ## 📁 Repository Structure
 
 ```
-My-Projects
+ProjectVerse
 │
-├── index.html              # Main portfolio page
+├── index.html              # Main page
 ├── style.css               # Global styles
 ├── script.js               # Search + routing helpers & data loader
 ├── html/                   # Project listing pages (10, 20, HTML-CSS, JS)
@@ -64,7 +64,7 @@ Each folder represents an **independent project** with its own source files.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/debug-node/My-Projects.git
+   git clone https://github.com/debug-node/ProjectVerse.git
    ```
 
 2. Open the folder in VS Code.
@@ -105,7 +105,7 @@ By working on these projects, you’ll understand:
 - ✅ **Search functionality** – Filter projects by name
 - ✅ **GitHub code links** – Quick access to project source code
 - ✅ **Responsive design** – Works on all devices
-- ✅ **Deployed on Vercel** – [View Live](https://my-projects-debug.vercel.app/)
+- ✅ **Deployed on Vercel** – [View Live](https://ProjectVerse-debug.vercel.app/)
 
 ---
 
