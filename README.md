@@ -1,4 +1,4 @@
-# 🚀 My-Projects
+# 🚀 ProjectVerse
 
 A **curated collection of front-end web projects** built using **HTML, CSS, and JavaScript**.
 
