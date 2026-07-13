@@ -27,7 +27,7 @@ ProjectVerse
 ├── index.html              # Main page
 ├── style.css               # Global styles
 ├── script.js               # Search + routing helpers & data loader
-├── html/                   # Project listing pages (10, 20, HTML-CSS, JS)
+├── pages/                   # Project listing pages (10, 20, HTML-CSS, JS)
 ├── data/                   # JSON data files with project metadata
 ├── 10-project/             # 10 Mini projects
 ├── 20-basic-project/       # 20 Beginner-friendly projects
@@ -117,13 +117,6 @@ If you like this repository, don’t forget to give it a ⭐ on GitHub!
 
 ## 📄 License
 
-This project is open-source and free to use for learning purposes.
-
----
-
-## 👤 Author
-
-**Aditya Kumar**  
-GitHub: [debug-node](https://github.com/debug-node)
+This project is open-source and free to use for learning and development purposes.
 
 ---

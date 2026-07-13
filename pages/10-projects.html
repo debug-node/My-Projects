@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 relative overflow-x-hidden noise-overlay font-[Outfit]">
+  
+  <canvas id="particle-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <div class="min-h-screen flex flex-col relative z-10">
+    <div class="flex-1">
+      
+      <header class="category-header">
+        <div class="category-header-wrap">
+          <div class="flex items-center justify-between">
+            <button onclick="go('../index.html')" class="back-btn group">
+              <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+              <span>Back</span>
+            </button>
+
+            <h1 class="text-xl sm:text-2xl font-bold text-white">
+              Mini <span class="text-purple-400">Projects</span>
+            </h1>
+
+            <div class="w-20"></div>
+          </div>
+        </div>
+      </header>
+
+      
+      <div class="search-bar-wrap">
+        <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="searchProjects()" class="search-input" />
+      </div>
+
+      
+      <div class="projects-grid-wrap">
+        <div id="projects" class="projects-grid"></div>
+      </div>
+
+      
+      <div id="project-viewer" class="hidden w-full pb-20">
+        
+      </div>
+
+      <script src="../script.js"></script>
+      <script src="viewer.js"></script>
+
+      <script>
+        async function init() {
+          const res = await fetch('/data/10-projects.json');
+          const projects = await res.json();
+          renderProjects(projects, '10-projects');
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+      </script>
+    </div>
+
+    
+    <footer class="category-footer mt-16">
+      <div class="category-footer-wrap">
+        <p class="text-gray-300 text-center sm:text-left text-base">
+          © 2026 <span class="text-purple-500 font-semibold">ProjectVerse</span> | Open-Source Project Hub
+        </p>
+
+        <div class="flex gap-4">
+          <a href="https://github.com/debug-node/ProjectVerse" target="_blank"
+            class="text-gray-400 hover:text-white transform hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(147,51,234,0.7)]"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
