@@ -2,9 +2,6 @@ function go(path) {
   window.location.href = path;
 }
 
-function openCode(url) {
-  window.open(url, "_blank");
-}
 
 function renderCategories(list) {
   const container = document.getElementById("categories");
