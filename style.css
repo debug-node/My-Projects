@@ -327,3 +327,101 @@ a {
 #inline-iframe.device-tablet {
   width: 768px !important;
 }
+
+/* Splash Loader & FLIP Heading Animation */
+#splash-loader {
+  background-color: #020617;
+  overflow: hidden;
+}
+
+#splash-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  will-change: transform;
+}
+
+.splash-logo-animate {
+  animation: logo-entrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes logo-entrance {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+    filter: blur(8px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* Shiny sweep animation for loader text colored components */
+.splash-loader-text .bg-gradient-to-r,
+.splash-loader-text .text-purple-400,
+.splash-loader-text .text-pink-400 {
+  background: linear-gradient(
+    90deg,
+    #60a5fa 0%,
+    #a855f7 25%,
+    #ec4899 50%,
+    #a855f7 75%,
+    #60a5fa 100%
+  ) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: shiny-sweep 2.5s linear infinite !important;
+  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.3));
+}
+
+@keyframes shiny-sweep {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.splash-logo-shadow-glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, rgba(59, 130, 246, 0.1) 50%, transparent 75%);
+  filter: blur(35px);
+  pointer-events: none;
+  animation: pulse-glow 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+}
+
+/* Staggered slide and fade-in classes for landing sections */
+.stagger-prepare {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1), transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.stagger-fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+

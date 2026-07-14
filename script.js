@@ -2,6 +2,148 @@ function go(path) {
   window.location.href = path;
 }
 
+function initSplashLoader() {
+  const targetHeading = document.querySelector("header h1, .category-header h1");
+  if (!targetHeading) return;
+
+  // Temporarily disable scroll and pointer events during animation
+  document.body.style.overflow = "hidden";
+  document.body.style.pointerEvents = "none";
+
+  // Hide target heading visually but keep layout
+  targetHeading.style.opacity = "0";
+
+  // Prepare and gather rest of the elements for a premium staggered fade-in
+  const headerSiblings = Array.from(targetHeading.parentElement.children).filter(child => child !== targetHeading);
+  
+  const flex1 = document.querySelector(".flex-1");
+  const contentChildren = flex1 ? Array.from(flex1.children).filter(child => child.tagName !== "HEADER") : [];
+  
+  const footer = document.querySelector("footer");
+
+  // Immediately hide them so they don't flash on initial load
+  headerSiblings.forEach(el => el.classList.add("stagger-prepare"));
+  contentChildren.forEach(el => el.classList.add("stagger-prepare"));
+  if (footer) footer.classList.add("stagger-prepare");
+
+  // Create the loader overlay
+  const loader = document.createElement("div");
+  loader.id = "splash-loader";
+  loader.className = "fixed inset-0 z-[9999] flex items-center justify-center bg-[#020617]";
+  
+  // Create logo container with glow effect
+  loader.innerHTML = `
+    <div class="splash-logo-shadow-glow"></div>
+    <div id="splash-logo-container" class="splash-logo-animate splash-loader-text">
+      <!-- Cloned heading will go here -->
+    </div>
+  `;
+  
+  const container = loader.querySelector("#splash-logo-container");
+  
+  // Clone heading structure and append to container
+  const headingClone = targetHeading.cloneNode(true);
+  headingClone.id = "splash-heading-clone";
+  headingClone.removeAttribute("id");
+  
+  // Clean up fonts/alignment to center it nicely
+  headingClone.className = targetHeading.className;
+  headingClone.classList.remove("mb-6", "mb-8");
+  headingClone.style.opacity = "1";
+  
+  container.appendChild(headingClone);
+  document.body.appendChild(loader);
+
+  // Animate and transition
+  setTimeout(() => {
+    const targetRect = targetHeading.getBoundingClientRect();
+    const cloneRect = headingClone.getBoundingClientRect();
+
+    if (cloneRect.width === 0 || targetRect.width === 0) {
+      // Fallback: fade out loader if heights are not set yet
+      loader.style.transition = "opacity 1s ease";
+      loader.style.opacity = "0";
+      setTimeout(() => {
+        targetHeading.style.opacity = "1";
+        headerSiblings.forEach(el => el.classList.remove("stagger-prepare"));
+        contentChildren.forEach(el => el.classList.remove("stagger-prepare"));
+        if (footer) footer.classList.remove("stagger-prepare");
+        document.body.style.overflow = "";
+        document.body.style.pointerEvents = "";
+        loader.remove();
+      }, 1000);
+      return;
+    }
+
+    // Compute center-to-center delta
+    const cloneCenterX = cloneRect.left + cloneRect.width / 2;
+    const cloneCenterY = cloneRect.top + cloneRect.height / 2;
+    const targetCenterX = targetRect.left + targetRect.width / 2;
+    const targetCenterY = targetRect.top + targetRect.height / 2;
+
+    const deltaX = targetCenterX - cloneCenterX;
+    const deltaY = targetCenterY - cloneCenterY;
+
+    // Compute scale difference
+    const scale = targetRect.width / cloneRect.width;
+
+    // 1. Clear the entrance CSS animation so it doesn't block inline styles
+    container.classList.remove("splash-logo-animate");
+    container.style.animation = "none";
+    
+    // Force reflow so the browser registers animation removal
+    void container.offsetWidth;
+
+    // 2. Set slow, smooth transition for the slide (1.8 seconds)
+    container.style.transition = "transform 1.8s cubic-bezier(0.16, 1, 0.3, 1)";
+    container.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale})`;
+
+    // 3. Fade out the splash background slowly
+    loader.style.transition = "background-color 1.8s cubic-bezier(0.16, 1, 0.3, 1)";
+    loader.style.backgroundColor = "transparent";
+    loader.style.pointerEvents = "none";
+
+    // 4. Stagger the entry of the rest of the page content
+    // Trigger description/back-button fade-in quickly as the slide begins
+    setTimeout(() => {
+      headerSiblings.forEach(el => el.classList.add("stagger-fade-in"));
+    }, 150);
+
+    // Stagger content containers step-by-step
+    contentChildren.forEach((el, idx) => {
+      setTimeout(() => {
+        el.classList.add("stagger-fade-in");
+      }, 350 + idx * 200); // 200ms stagger between sections
+    });
+
+    // Finally fade in the footer at the very end
+    if (footer) {
+      setTimeout(() => {
+        footer.classList.add("stagger-fade-in");
+      }, 400 + contentChildren.length * 200);
+    }
+    
+    // Restore scrolling slightly before the animation ends
+    setTimeout(() => {
+      document.body.style.overflow = "";
+      document.body.style.pointerEvents = "";
+    }, 1400);
+
+    // 5. Once transition ends, clean up
+    setTimeout(() => {
+      targetHeading.style.opacity = "1";
+      
+      // Clean up classes to restore natural layout behavior
+      headerSiblings.forEach(el => el.classList.remove("stagger-prepare", "stagger-fade-in"));
+      contentChildren.forEach(el => el.classList.remove("stagger-prepare", "stagger-fade-in"));
+      if (footer) footer.classList.remove("stagger-prepare", "stagger-fade-in");
+      
+      loader.remove();
+    }, 1850);
+
+  }, 1500); // 1.5 seconds loading time
+}
+
 
 function renderCategories(list) {
   const container = document.getElementById("categories");
@@ -417,6 +559,8 @@ function animateCounters() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  // Initialize the premium splash screen first
+  initSplashLoader();
 
   initParticles();
   initGlowTracker();
@@ -433,7 +577,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       projectsCountEl.setAttribute("data-target", allProjectsCached.length);
     }
 
-    animateCounters();
+    // Delay counter animation until after the splash finishes
+    setTimeout(animateCounters, 3000);
 
     try {
       const res = await fetch('/data/categories.json');
@@ -489,6 +634,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       setTimeout(type, typingSpeed);
     }
 
-    setTimeout(type, 1200);
+    // Delay typing animation until the splash screen is fully finished
+    setTimeout(type, 3400);
   }
 });
