@@ -1,4 +1,38 @@
 let activeProject = null;
+let isSidebarOpen = true;
+let viewerResizeHandler = null;
+
+function updateSidebarState() {
+  const sidebar = document.getElementById("inline-sidebar");
+  const toggleBtn = document.getElementById("toggle-sidebar-btn");
+  const backdrop = document.getElementById("sidebar-backdrop");
+  if (!sidebar) return;
+
+  const isMobile = window.innerWidth < 768;
+
+  sidebar.classList.toggle("collapsed", !isSidebarOpen);
+
+  if (backdrop) {
+    if (isSidebarOpen && isMobile) {
+      backdrop.classList.remove("hidden");
+      backdrop.offsetHeight;
+      backdrop.classList.add("active");
+    } else {
+      backdrop.classList.remove("active");
+      setTimeout(() => {
+
+        if ((!isSidebarOpen || !isMobile) && backdrop) {
+          backdrop.classList.add("hidden");
+        }
+      }, 300);
+    }
+  }
+
+  if (toggleBtn) {
+    toggleBtn.classList.toggle("text-purple-400", isSidebarOpen);
+    toggleBtn.classList.toggle("text-slate-400", !isSidebarOpen);
+  }
+}
 
 function renderProjects(list, categoryKey) {
   const container = document.getElementById("projects");
@@ -68,7 +102,6 @@ function openInlineProject(p, list, categoryKey) {
   if (searchBar) {
     searchBar.parentElement.classList.add("hidden");
   }
-  
 
   document.body.classList.add("overflow-y-hidden");
   const footer = document.querySelector("footer");
@@ -92,53 +125,57 @@ function openInlineProject(p, list, categoryKey) {
   viewer.innerHTML = `
     <!-- Top toolbar controls centered with site grids -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 mb-3">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-purple-500/20">
-        <div class="flex items-center gap-4.5 sm:gap-5">
+      <div class="flex items-center justify-between gap-1.5 sm:gap-4 pb-2 border-b border-purple-500/20 w-full overflow-hidden">
+               <!-- Navigation Buttons and Project Info -->
+        <div class="flex items-center gap-1.5 sm:gap-4 min-w-0 sm:flex-1">
           <!-- Back to grid button -->
-          <button id="close-viewer-btn" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-purple-500/20 bg-purple-500/5 hover:bg-purple-500/20 text-purple-300 transition-all text-xs font-semibold" title="Go Back to Project Grid">
-            <i class="fa-solid fa-chevron-left"></i>
-            <span>Back to Grid</span>
+          <button id="close-viewer-btn" class="flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg border border-purple-500/20 bg-purple-500/5 hover:bg-purple-500/20 text-purple-300 transition-all text-xs font-semibold shrink-0" title="Go Back to Project Grid">
+            <i class="fa-solid fa-chevron-left text-[10px] sm:text-xs"></i>
+            <span class="hidden sm:inline">Back to Grid</span>
           </button>
 
           <!-- Toggle Sidebar menu button -->
-          <button id="toggle-sidebar-btn" class="w-8 h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-400 flex items-center justify-center transition-all" title="Toggle Projects Sidebar">
-            <i class="fa-solid fa-bars text-sm"></i>
+          <button id="toggle-sidebar-btn" class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-400 flex items-center justify-center transition-all shrink-0" title="Toggle Projects Sidebar">
+            <i class="fa-solid fa-bars text-xs sm:text-sm"></i>
           </button>
 
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
-              <i id="inline-project-icon" class="fa-solid ${p.icon || 'fa-cube'} text-sm"></i>
+          <!-- Icon & Title -->
+          <div class="flex items-center gap-1.5 sm:gap-3 min-w-0">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 shrink-0">
+              <i id="inline-project-icon" class="fa-solid ${p.icon || 'fa-cube'} text-xs sm:text-sm"></i>
             </div>
-            <h3 id="inline-project-title" class="text-base sm:text-lg font-bold text-white leading-none">${p.title}</h3>
+            <h3 id="inline-project-title" class="text-xs sm:text-base md:text-lg font-bold text-white leading-none truncate">${p.title}</h3>
           </div>
         </div>
 
         <!-- Device Preview Toggle -->
-        <div class="hidden md:flex items-center gap-2 bg-purple-950/60 p-1 border border-purple-500/15 rounded-xl max-w-fit px-2">
-          <button onclick="setInlineDevice('mobile')" id="btn-inline-mobile" class="w-7 h-7 rounded-lg text-purple-300/40 hover:text-white hover:bg-purple-500/10 flex items-center justify-center transition-all" title="Mobile View (375px)">
-            <i class="fa-solid fa-mobile-screen-button text-xs"></i>
-          </button>
-          <button onclick="setInlineDevice('tablet')" id="btn-inline-tablet" class="w-7 h-7 rounded-lg text-purple-300/40 hover:text-white hover:bg-purple-500/10 flex items-center justify-center transition-all" title="Tablet View (768px)">
-            <i class="fa-solid fa-tablet-screen-button text-xs"></i>
-          </button>
-          <button onclick="setInlineDevice('desktop')" id="btn-inline-desktop" class="w-7 h-7 rounded-lg text-purple-400 bg-purple-500/10 flex items-center justify-center transition-all" title="Desktop View (Full Width)">
-            <i class="fa-solid fa-desktop text-xs"></i>
-          </button>
+        <div class="hidden md:flex items-center justify-center gap-2 md:flex-1 shrink-0">
+          <div class="flex items-center gap-2 bg-purple-950/60 p-1 border border-purple-500/15 rounded-xl px-2">
+            <button onclick="setInlineDevice('mobile')" id="btn-inline-mobile" class="w-7 h-7 rounded-lg text-purple-300/40 hover:text-white hover:bg-purple-500/10 flex items-center justify-center transition-all" title="Mobile View (375px)">
+              <i class="fa-solid fa-mobile-screen-button text-xs"></i>
+            </button>
+            <button onclick="setInlineDevice('tablet')" id="btn-inline-tablet" class="w-7 h-7 rounded-lg text-purple-300/40 hover:text-white hover:bg-purple-500/10 flex items-center justify-center transition-all" title="Tablet View (768px)">
+              <i class="fa-solid fa-tablet-screen-button text-xs"></i>
+            </button>
+            <button onclick="setInlineDevice('desktop')" id="btn-inline-desktop" class="w-7 h-7 rounded-lg text-purple-400 bg-purple-500/10 flex items-center justify-center transition-all" title="Desktop View (Full Width)">
+              <i class="fa-solid fa-desktop text-xs"></i>
+            </button>
+          </div>
         </div>
 
         <!-- Action items -->
-        <div class="flex items-center gap-3.5 max-w-fit self-end sm:self-auto">
-          <button id="inline-star-btn" class="w-8 h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-300/50 hover:text-yellow-400 flex items-center justify-center transition-all" title="${isFav ? 'Remove from Favorites' : 'Add to Favorites'}">
-            <i id="inline-star-icon" class="${isFav ? 'fa-solid fa-star text-yellow-400' : 'fa-regular fa-star text-purple-300/40'} text-xs"></i>
+        <div class="flex items-center gap-1 sm:gap-3.5 shrink-0 sm:flex-1 sm:justify-end">
+          <button id="inline-star-btn" class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-300/50 hover:text-yellow-400 flex items-center justify-center transition-all" title="${isFav ? 'Remove from Favorites' : 'Add to Favorites'}">
+            <i id="inline-star-icon" class="${isFav ? 'fa-solid fa-star text-yellow-400' : 'fa-regular fa-star text-purple-300/40'} text-[10px] sm:text-xs"></i>
           </button>
-          <button id="inline-copy-btn" class="w-8 h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-300/50 hover:text-white flex items-center justify-center transition-all" title="Copy Share Link">
-            <i class="fa-regular fa-copy text-xs"></i>
+          <button id="inline-copy-btn" class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-300/50 hover:text-white flex items-center justify-center transition-all" title="Copy Share Link">
+            <i class="fa-regular fa-copy text-[10px] sm:text-xs"></i>
           </button>
-          <a id="inline-code-btn" href="${p.code}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-300/50 hover:text-white flex items-center justify-center transition-all" title="View Source Code">
-            <i class="fa-solid fa-code text-xs"></i>
+          <a id="inline-code-btn" href="${p.code}" target="_blank" rel="noopener noreferrer" class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-300/50 hover:text-white flex items-center justify-center transition-all" title="View Source Code">
+            <i class="fa-solid fa-code text-[10px] sm:text-xs"></i>
           </a>
-          <a id="inline-live-btn" href="${p.live}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-300/50 hover:text-white flex items-center justify-center transition-all" title="Open in Full Screen">
-            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          <a id="inline-live-btn" href="${p.live}" target="_blank" rel="noopener noreferrer" class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-purple-500/15 bg-purple-500/5 hover:bg-purple-500/15 text-purple-300/50 hover:text-white flex items-center justify-center transition-all" title="Open in Full Screen">
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] sm:text-xs"></i>
           </a>
         </div>
       </div>
@@ -147,8 +184,11 @@ function openInlineProject(p, list, categoryKey) {
     <!-- Split-screen Workspace wrapper (with sidebar and iframe viewport) -->
     <div id="inline-viewport-wrapper" class="relative w-full h-[calc(100vh-240px)] min-h-[350px] border-y border-purple-500/15 bg-[#0c0a1a] flex overflow-hidden">
       
+      <!-- Backdrop for mobile drawer -->
+      <div id="sidebar-backdrop" class="hidden absolute inset-0 bg-black/60 backdrop-blur-sm z-20 md:hidden transition-opacity duration-300 opacity-0"></div>
+
       <!-- Left sidebar listing all category projects -->
-      <div id="inline-sidebar" class="w-72 border-r border-purple-500/15 bg-[#110e20]/90 backdrop-blur-md shrink-0 flex flex-col transition-all duration-300 overflow-hidden">
+      <div id="inline-sidebar" class="absolute md:relative left-0 top-0 h-full z-30 w-72 border-r border-purple-500/15 bg-[#110e20]/95 md:bg-[#110e20]/90 backdrop-blur-md shrink-0 flex flex-col transition-all duration-300 overflow-hidden">
         <!-- Search bar inside sidebar list -->
         <div class="p-3 border-b border-purple-500/15">
           <input type="text" id="sidebar-search" placeholder="🔍 Search sidebar..." class="w-full px-3 py-1.5 bg-white/[0.04] border border-purple-500/15 rounded-lg text-[10px] text-white placeholder-purple-300/30 focus:outline-none focus:border-purple-500/40 focus:ring-1 focus:ring-purple-500/20" />
@@ -198,24 +238,41 @@ function openInlineProject(p, list, categoryKey) {
 
   const sidebar = document.getElementById("inline-sidebar");
   const toggleBtn = document.getElementById("toggle-sidebar-btn");
-  let isSidebarOpen = true;
+  const backdrop = document.getElementById("sidebar-backdrop");
 
-  if (toggleBtn && sidebar) {
+  if (viewerResizeHandler) {
+    window.removeEventListener("resize", viewerResizeHandler);
+  }
+
+  const checkMobile = () => window.innerWidth < 768;
+  let lastIsMobile = checkMobile();
+  isSidebarOpen = !lastIsMobile;
+
+  updateSidebarState();
+
+  if (toggleBtn) {
     toggleBtn.addEventListener("click", () => {
       isSidebarOpen = !isSidebarOpen;
-      if (isSidebarOpen) {
-        sidebar.style.width = "18rem"; // 288px (w-72)
-        sidebar.style.borderRightWidth = "1px";
-        toggleBtn.classList.remove("text-slate-400");
-        toggleBtn.classList.add("text-purple-400");
-      } else {
-        sidebar.style.width = "0px";
-        sidebar.style.borderRightWidth = "0px";
-        toggleBtn.classList.remove("text-purple-400");
-        toggleBtn.classList.add("text-slate-400");
-      }
+      updateSidebarState();
     });
   }
+
+  if (backdrop) {
+    backdrop.addEventListener("click", () => {
+      isSidebarOpen = false;
+      updateSidebarState();
+    });
+  }
+
+  viewerResizeHandler = () => {
+    const currentIsMobile = checkMobile();
+    if (currentIsMobile !== lastIsMobile) {
+      lastIsMobile = currentIsMobile;
+      isSidebarOpen = !currentIsMobile;
+      updateSidebarState();
+    }
+  };
+  window.addEventListener("resize", viewerResizeHandler);
 
   const sidebarSearch = document.getElementById("sidebar-search");
   if (sidebarSearch) {
@@ -234,7 +291,9 @@ function openInlineProject(p, list, categoryKey) {
   }
 
   document.getElementById("inline-star-btn").addEventListener("click", () => {
-    toggleInlineFavorite(p, categoryKey);
+    if (activeProject) {
+      toggleInlineFavorite(activeProject, categoryKey);
+    }
   });
 
   document.getElementById("inline-copy-btn").addEventListener("click", () => {
@@ -244,7 +303,7 @@ function openInlineProject(p, list, categoryKey) {
   const iframeEl = document.getElementById("inline-iframe");
   const loaderEl = document.getElementById("inline-loader");
   iframeEl.addEventListener("load", () => {
-    loaderEl.style.display = "none";
+    loaderEl.classList.add("hidden");
   });
 }
 
@@ -257,11 +316,10 @@ function renderSidebarList(list, currentProj, categoryKey) {
   list.forEach(p => {
     const isActive = p.title.toLowerCase() === currentProj.title.toLowerCase();
     const btn = document.createElement("button");
-    btn.className = `w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-xs font-medium transition-all ${
-      isActive 
-        ? "bg-purple-500/10 border-l-2 border-purple-500 text-purple-300" 
+    btn.className = `w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-xs font-medium transition-all ${isActive
+        ? "bg-purple-500/10 border-l-2 border-purple-500 text-purple-300"
         : "text-purple-300/40 hover:text-white hover:bg-purple-500/5"
-    }`;
+      }`;
 
     btn.innerHTML = `
       <i class="fa-solid ${p.icon || 'fa-cube'} ${isActive ? 'text-purple-400' : 'text-purple-400/30'} text-xs shrink-0"></i>
@@ -290,7 +348,7 @@ function switchSidebarProject(p, list, categoryKey) {
 
   if (!iframeEl || !loaderEl) return;
 
-  loaderEl.style.display = "flex";
+  loaderEl.classList.remove("hidden");
 
   iframeEl.src = p.live;
 
@@ -307,28 +365,22 @@ function switchSidebarProject(p, list, categoryKey) {
   const newUrl = `${window.location.pathname}?project=${encodeURIComponent(p.title)}`;
   window.history.pushState({ path: newUrl }, "", newUrl);
 
+  activeProject = p;
+
   const isFav = isProjectFavorite(p, categoryKey);
   if (starIcon) {
     starIcon.className = isFav ? "fa-solid fa-star text-yellow-400 text-xs" : "fa-regular fa-star text-slate-400 text-xs";
   }
   if (starBtn) {
     starBtn.title = isFav ? "Remove from Favorites" : "Add to Favorites";
-    
-
-    const newStarBtn = starBtn.cloneNode(true);
-    starBtn.parentNode.replaceChild(newStarBtn, starBtn);
-    newStarBtn.addEventListener("click", () => {
-      toggleInlineFavorite(p, categoryKey);
-      const updatedFav = isProjectFavorite(p, categoryKey);
-      const updatedIcon = newStarBtn.querySelector("i");
-      if (updatedIcon) {
-        updatedIcon.className = updatedFav ? "fa-solid fa-star text-yellow-400 text-xs" : "fa-regular fa-star text-slate-400 text-xs";
-      }
-      newStarBtn.title = updatedFav ? "Remove from Favorites" : "Add to Favorites";
-    });
   }
 
   renderSidebarList(list, p, categoryKey);
+
+  if (window.innerWidth < 768) {
+    isSidebarOpen = false;
+    updateSidebarState();
+  }
 }
 
 function closeInlineViewer(searchBar) {
@@ -353,6 +405,11 @@ function closeInlineViewer(searchBar) {
     footer.classList.add("mt-16");
   }
 
+  if (viewerResizeHandler) {
+    window.removeEventListener("resize", viewerResizeHandler);
+    viewerResizeHandler = null;
+  }
+
   window.history.pushState(null, "", window.location.pathname);
   activeProject = null;
 }
@@ -373,16 +430,16 @@ window.setInlineDevice = function (deviceType) {
     }
   });
 
+  iframe.classList.toggle("device-mobile", deviceType === "mobile");
+  iframe.classList.toggle("device-tablet", deviceType === "tablet");
+
   if (deviceType === "mobile") {
-    iframe.style.width = "375px";
     label.textContent = "Mobile View";
     if (btnMobile) btnMobile.classList.add("text-purple-400", "bg-purple-500/10");
   } else if (deviceType === "tablet") {
-    iframe.style.width = "768px";
     label.textContent = "Tablet View";
     if (btnTablet) btnTablet.classList.add("text-purple-400", "bg-purple-500/10");
   } else {
-    iframe.style.width = "100%";
     label.textContent = "Desktop View";
     if (btnDesktop) btnDesktop.classList.add("text-purple-400", "bg-purple-500/10");
   }

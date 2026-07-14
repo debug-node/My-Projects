@@ -391,3 +391,21 @@ a {
   pointer-events: none;
   z-index: 1;
 }
+#inline-sidebar.collapsed {
+  width: 0px !important;
+  border-right-width: 0px !important;
+}
+
+#sidebar-backdrop.active {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#inline-iframe.device-mobile {
+  width: 375px !important;
+}
+
+#inline-iframe.device-tablet {
+  width: 768px !important;
+}
