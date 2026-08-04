@@ -103,5 +103,12 @@
     "desc": "Email & password validator",
     "live": "/other-projects/Email_Password_Validator/index.html",
     "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/Email_Password_Validator"
+  },
+  {
+    "title": "Realtime Search Filter",
+    "icon": "fa-magnifying-glass",
+    "desc": "Search & filter users in real-time",
+    "live": "/other-projects/realtime-search-filter/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/realtime-search-filter"
   }
 ]
