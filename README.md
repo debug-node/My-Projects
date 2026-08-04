@@ -10,7 +10,7 @@ This repository brings together multiple mini-projects and UI experiments into *
 
 ## 📌 Highlights
 
-- ✅ 30+ mini projects  
+- ✅ 50+ live projects  
 - ✅ Beginner to intermediate level  
 - ✅ Tailwind-styled landing page with glassmorphism  
 - ✅ Descriptions on all project cards  
@@ -32,7 +32,7 @@ ProjectVerse
 ├── 10-project/             # 10 Mini projects
 ├── 20-basic-project/       # 20 Beginner-friendly projects
 ├── HTML-CSS-Project/       # 16 Pure HTML/CSS UI projects
-├── other-projects/         # 12 JavaScript logic apps
+├── other-projects/         # 15 JavaScript logic apps
 └── README.md
 
 ```

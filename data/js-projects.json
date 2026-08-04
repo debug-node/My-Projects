@@ -110,5 +110,12 @@
     "desc": "Search & filter users in real-time",
     "live": "/other-projects/realtime-search-filter/index.html",
     "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/realtime-search-filter"
+  },
+  {
+    "title": "CallStack",
+    "icon": "fa-phone",
+    "desc": "Manage call notes with a stacked card interface",
+    "live": "/other-projects/call-app/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/call-app"
   }
 ]

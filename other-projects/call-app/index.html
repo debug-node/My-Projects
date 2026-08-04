@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Manage your call notes with a beautiful stacked card interface. Add contacts, categorize calls, and stay organized." />
+
+    <title>CallStack — Smart Call Notes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="ri-moon-line"></i>
+    </button>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="form-container" id="formContainer">
+            <div class="form-header">
+                <h2>New Call</h2>
+                <button class="close-btn" id="closeForm" aria-label="Close form">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <form id="callForm">
+                <label for="imageUrl">Image URL</label>
+                <input id="imageUrl" required type="text" placeholder="https://example.com/photo.jpg" />
+
+                <label for="fullName">Full Name</label>
+                <input id="fullName" required type="text" placeholder="Enter full name" />
+
+                <label for="homeTown">Home Town</label>
+                <input id="homeTown" required type="text" placeholder="Enter home town" />
+
+                <label for="purpose">Purpose</label>
+                <input id="purpose" required type="text" placeholder="e.g., Quick appointment note" />
+
+                <label>Category</label>
+
+                <div class="radio-group">
+                    <label class="tag-checkbox">
+                        <input required type="radio" name="category" value="Emergency" />
+                        <span><i class="ri-alarm-warning-line"></i> Emergency</span>
+                    </label>
+
+                    <label class="tag-checkbox">
+                        <input type="radio" name="category" value="Important" />
+                        <span><i class="ri-star-line"></i> Important</span>
+                    </label>
+
+                    <label class="tag-checkbox">
+                        <input type="radio" name="category" value="Urgent" />
+                        <span><i class="ri-timer-flash-line"></i> Urgent</span>
+                    </label>
+
+                    <label class="tag-checkbox">
+                        <input type="radio" name="category" value="No Rush" />
+                        <span><i class="ri-time-line"></i> No Rush</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="ri-add-line"></i> Create Note
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="note-container">
+        <div class="left-icons">
+            <button id="add-note" aria-label="Add new note" title="Add Note">
+                <i class="ri-add-line"></i>
+            </button>
+
+            <button id="upBtn" aria-label="Previous card" title="Previous">
+                <i class="ri-arrow-up-line"></i>
+            </button>
+
+            <button id="downBtn" aria-label="Next card" title="Next">
+                <i class="ri-arrow-down-line"></i>
+            </button>
+        </div>
+
+        <div class="stack" id="stack">
+            <!-- Empty state -->
+            <div class="empty-state" id="emptyState">
+                <i class="ri-phone-line"></i>
+                <h3>No call notes yet</h3>
+                <p>Click the <strong>+</strong> button to add your first contact</p>
+            </div>
+        </div>
+
+        <div class="card-counter" id="cardCounter"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
