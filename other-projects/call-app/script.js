@@ -69,6 +69,17 @@ modalOverlay.addEventListener("click", (e) => {
   if (e.target === modalOverlay) closeModal();
 });
 
+// ===== Invalid Animation =====
+const inputs = form.querySelectorAll("input");
+
+inputs.forEach((input) => {
+  input.addEventListener("invalid", () => {
+    formContainer.style.animation = "none";
+    void formContainer.offsetHeight;
+    formContainer.style.animation = "shake 0.4s ease";
+  });
+});
+
 // ===== Form Submit =====
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -78,13 +89,6 @@ form.addEventListener("submit", (e) => {
   const homeTown = form.elements.homeTown.value.trim();
   const purpose = form.elements.purpose.value.trim();
   const category = form.querySelector("input[name='category']:checked")?.value;
-
-  if (!imageUrl || !fullName || !homeTown || !purpose || !category) {
-    formContainer.style.animation = "none";
-    void formContainer.offsetHeight;
-    formContainer.style.animation = "shake 0.4s ease";
-    return;
-  }
 
   const task = {
     id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
