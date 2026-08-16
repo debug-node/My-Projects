@@ -117,5 +117,12 @@
     "desc": "Manage call notes with a stacked card interface",
     "live": "/other-projects/call-app/index.html",
     "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/call-app"
+  },
+  {
+    "title": "User Manager",
+    "icon": "fa-users",
+    "desc": "Manage user profiles and details with dark mode",
+    "live": "/other-projects/user-manager/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/user-manager"
   }
 ]

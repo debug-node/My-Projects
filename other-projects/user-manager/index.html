@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen text-gray-100 py-8 overflow-x-hidden">
+    <form autocomplete="off"
+        class="bg-gray-800/90 backdrop-blur rounded-2xl shadow-xl p-6 mb-8 w-full max-w-lg mx-auto border border-gray-700">
+        <h2 class="text-2xl font-bold mb-5 text-center text-blue-400 tracking-tight">Add User</h2>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+                <label class="block text-gray-300 font-medium mb-1.5 text-sm" for="name">Name</label>
+                <input
+                    class="w-full px-3 py-2 text-sm bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition placeholder-gray-400"
+                    type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label class="block text-gray-300 font-medium mb-1.5 text-sm" for="role">Role</label>
+                <input
+                    class="w-full px-3 py-2 text-sm bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition placeholder-gray-400"
+                    type="text" id="role" name="role" required>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300 font-medium mb-1.5 text-sm" for="bio">Bio</label>
+            <textarea
+                class="w-full px-3 py-2 text-sm bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition placeholder-gray-400"
+                id="bio" name="bio" rows="2" required></textarea>
+        </div>
+        <div class="mb-5">
+            <label class="block text-gray-300 font-medium mb-1.5 text-sm" for="photo">Photo URL</label>
+            <input
+                class="w-full px-3 py-2 text-sm bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition placeholder-gray-400"
+                type="url" id="photo" name="photo" required>
+        </div>
+        <button
+            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-500 hover:to-purple-500 transition shadow-lg text-sm"
+            type="submit">Submit</button>
+    </form>
+    <div class="users grid grid-cols-1 md:grid-cols-3 gap-10 px-6 max-w-6xl mx-auto">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
