@@ -603,7 +603,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const texts = [
-    "50+ Interactive Web Apps",
+    "70+ Interactive Web Apps",
     "Pure HTML, CSS & JavaScript",
     "Sleek & Modern UI Playgrounds",
     "Instant Live Previews & Code",

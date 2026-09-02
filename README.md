@@ -24,29 +24,36 @@ This repository brings together multiple mini-projects and UI experiments into *
 ```
 ProjectVerse
 │
-├── index.html              # Main page
+├── index.html              # Main landing page
 ├── style.css               # Global styles
 ├── script.js               # Search + routing helpers & data loader
-├── pages/                   # Project listing pages (10, 20, HTML-CSS, JS)
+├── pages/                  # Category pages (mini-projects, beginner-projects, html-css-projects, js-projects)
 ├── data/                   # JSON data files with project metadata
-├── 10-project/             # 10 Mini projects
-├── 20-basic-project/       # 20 Beginner-friendly projects
-├── HTML-CSS-Project/       # 16 Pure HTML/CSS UI projects
-├── other-projects/         # 15 JavaScript logic apps
+│   ├── mini-projects.json
+│   ├── beginner-projects.json
+│   ├── html-css-projects.json
+│   ├── js-projects.json
+│   └── categories.json
+├── projects/               # All project source files organized cleanly
+│   ├── mini/               # 10 Mini practice projects
+│   ├── beginner/           # 20 Beginner-friendly fundamental projects
+│   ├── html-css/           # 20 Pure HTML/CSS UI projects
+│   └── js/                 # 20 JavaScript logic apps
 └── README.md
-
 ```
+
 ---
+
 ## 📌 What’s Inside?
 
-This repository contains multiple project folders, including:
+This repository contains 70 interactive projects categorized into:
 
-- **10 Projects** – Small to medium-level practice projects
-- **20 Basic Projects** – Beginner-friendly projects to strengthen fundamentals
-- **HTML-CSS Projects** – Frontend UI projects using pure HTML and CSS
-- **Other Projects** – JavaScript and logic-based applications
+- **Mini Projects (`projects/mini/`)** – 10 small calculators, widgets & utilities
+- **Beginner Projects (`projects/beginner/`)** – 20 fundamental JavaScript concept apps
+- **UI/UX Designs (`projects/html-css/`)** – 20 frontend UI designs using pure HTML and CSS
+- **Logic Apps (`projects/js/`)** – 20 JavaScript apps with advanced logic and interactivity
 
-Each folder represents an **independent project** with its own source files.
+Each folder represents an **independent project** with its own clean source files.
 
 ---
 
@@ -78,7 +85,7 @@ Each folder represents an **independent project** with its own source files.
 
 ## 🔗 Special Note: Loan Calculator
 
-- 📁 Path: `10-project/Loan-Calculator`
+- 📁 Path: `projects/mini/loan-calculator`
 - 🔖 Maintained as an **individual GitHub repository**
 - 🔗 Linked using **Git submodule**
 - 🧩 Keeps code modular & reusable
@@ -93,7 +100,7 @@ By working on these projects, you’ll understand:
 - Event handling
 - CSS layouts & animations
 - JavaScript logic building
-- Project structuring
+- Clean project structuring
 - Git & GitHub workflows
 
 ---
@@ -101,8 +108,9 @@ By working on these projects, you’ll understand:
 ## 🌱 Features Implemented
 
 - ✅ **Dynamic JSON-driven project system** – All projects listed from JSON data
+- ✅ **Interactive In-line Player** – Preview any project directly within the app
 - ✅ **Live project links** – Direct links to each project
-- ✅ **Search functionality** – Filter projects by name
+- ✅ **Search functionality** – Filter 70+ projects in real time
 - ✅ **GitHub code links** – Quick access to project source code
 - ✅ **Responsive design** – Works on all devices
 - ✅ **Deployed on Vercel** – [View Live](https://ProjectVerse-debug.vercel.app/)
