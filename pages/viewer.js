@@ -72,6 +72,13 @@ function renderProjects(list, categoryKey) {
       openInlineProject(p, list, categoryKey);
     });
 
+    const codeBtn = card.querySelector(".code-btn");
+    if (codeBtn) {
+      codeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    }
+
     card.addEventListener("click", () => {
       openInlineProject(p, list, categoryKey);
     });

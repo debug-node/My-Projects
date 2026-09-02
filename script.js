@@ -232,6 +232,13 @@ function loadFavoritesOnHome() {
       e.stopPropagation();
       go(targetUrl);
     });
+
+    const codeBtn = card.querySelector(".code-btn");
+    if (codeBtn) {
+      codeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    }
     
     card.addEventListener("click", () => go(targetUrl));
 
