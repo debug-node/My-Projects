@@ -113,7 +113,7 @@ By working on these projects, you’ll understand:
 - ✅ **Search functionality** – Filter 70+ projects in real time
 - ✅ **GitHub code links** – Quick access to project source code
 - ✅ **Responsive design** – Works on all devices
-- ✅ **Deployed on Vercel** – [View Live](https://ProjectVerse-debug.vercel.app/)
+- ✅ **Deployed on Vercel** – [View Live](https://project-verse-pi.vercel.app/)
 
 ---
 
