@@ -108,8 +108,8 @@
     "title": "StudySync",
     "icon": "fa-graduation-cap",
     "desc": "Educational platform UI",
-    "live": "/projects/html-css/Studysync/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/html-css/Studysync"
+    "live": "/projects/html-css/studysync/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/html-css/studysync"
   },
   {
     "title": "Alien Blog Layout",
@@ -122,15 +122,15 @@
     "title": "Das Grune Webpage",
     "icon": "fa-solid fa-align-justify",
     "desc": "Dashboard design",
-    "live": "/projects/html-css/Design/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/html-css/Design"
+    "live": "/projects/html-css/design/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/html-css/design"
   },
   {
     "title": "Sheryians coding school",
     "icon": "fa-graduation-cap",
     "desc": "Educational platform UI",
-    "live": "/projects/html-css/SCS-clone/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/html-css/SCS-clone"
+    "live": "/projects/html-css/scs-clone/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/html-css/scs-clone"
   },
   {
     "title": "Landing Page",

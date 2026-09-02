@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Beginner Projects</title>
+  <title>Mini Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   
@@ -32,7 +32,7 @@
             </button>
 
             <h1 class="text-xl sm:text-2xl font-bold text-white">
-              Beginner <span class="text-purple-400">Projects</span>
+              Mini <span class="text-purple-400">Projects</span>
             </h1>
 
             <div class="w-20"></div>
@@ -60,9 +60,9 @@
 
       <script>
         async function init() {
-          const res = await fetch('/data/20-projects.json');
+          const res = await fetch('/data/mini-projects.json');
           const projects = await res.json();
-          renderProjects(projects, '20-projects');
+          renderProjects(projects, 'mini-projects');
         }
 
         document.addEventListener('DOMContentLoaded', init);

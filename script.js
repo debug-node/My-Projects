@@ -429,8 +429,8 @@ let allProjectsCached = [];
 
 async function cacheAllProjects() {
   const categoryFiles = [
-    { key: "10-projects", name: "Mini Projects" },
-    { key: "20-projects", name: "Beginner Projects" },
+    { key: "mini-projects", name: "Mini Projects" },
+    { key: "beginner-projects", name: "Beginner Projects" },
     { key: "html-css-projects", name: "UI/UX Designs" },
     { key: "js-projects", name: "Logic Apps" }
   ];

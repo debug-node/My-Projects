@@ -6,7 +6,7 @@
     "iconColor": "text-blue-400",
     "gradientFrom": "from-blue-500/20",
     "gradientTo": "to-purple-600/20",
-    "url": "/pages/10-projects.html",
+    "url": "/pages/mini-projects.html",
     "dataTitle": "mini projects"
   },
   {
@@ -16,7 +16,7 @@
     "iconColor": "text-purple-400",
     "gradientFrom": "from-purple-500/20",
     "gradientTo": "to-pink-600/20",
-    "url": "/pages/20-projects.html",
+    "url": "/pages/beginner-projects.html",
     "dataTitle": "beginner projects"
   },
   {
