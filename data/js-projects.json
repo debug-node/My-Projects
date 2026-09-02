@@ -3,140 +3,140 @@
     "title": "Calculator",
     "icon": "fa-calculator",
     "desc": "Basic calculator app",
-    "live": "/other-projects/calculator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/calculator"
+    "live": "/projects/js/calculator/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/calculator"
   },
   {
     "title": "Color Box",
     "icon": "fa-palette",
     "desc": "Interactive color picker",
-    "live": "/other-projects/color-box/colorbox.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/color-box"
+    "live": "/projects/js/color-box/colorbox.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/color-box"
   },
   {
     "title": "Cricket Game",
     "icon": "fa-solid fa-baseball-bat-ball",
     "desc": "Simple cricket game",
-    "live": "/other-projects/Cricket-Game/cricket.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/Cricket-Game"
+    "live": "/projects/js/cricket-game/cricket.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Cricket-Game"
   },
   {
     "title": "Dynamic Website",
     "icon": "fa-globe",
     "desc": "Dynamic web content",
-    "live": "/other-projects/dynamic-website/dynamicwebsite.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/dynamic-website"
+    "live": "/projects/js/dynamic-website/dynamicwebsite.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/dynamic-website"
   },
   {
     "title": "Factorial",
     "icon": "fa-hashtag",
     "desc": "Calculate factorials",
-    "live": "/other-projects/factorial/factorial.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/factorial"
+    "live": "/projects/js/factorial/factorial.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/factorial"
   },
   {
     "title": "Guess Number",
     "icon": "fa-question",
     "desc": "Number guessing game",
-    "live": "/other-projects/Guess-number/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/Guess-number"
+    "live": "/projects/js/guess-number/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Guess-number"
   },
   {
     "title": "Hacking Terminal",
     "icon": "fa-terminal",
     "desc": "Hacker terminal simulator",
-    "live": "/other-projects/hacking/hackingTerminal.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/hacking"
+    "live": "/projects/js/hacking/hackingTerminal.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/hacking"
   },
   {
     "title": "Hacking Terminal",
     "icon": "fa-terminal",
     "desc": "Terminal simulator v2",
-    "live": "/other-projects/hacking/index2.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/hacking"
+    "live": "/projects/js/hacking/index2.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/hacking"
   },
   {
     "title": "Hacking Terminal",
     "icon": "fa-terminal",
     "desc": "Terminal simulator v3",
-    "live": "/other-projects/hacking/index3.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/hacking"
+    "live": "/projects/js/hacking/index3.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/hacking"
   },
   {
     "title": "Tell Me Joke",
     "icon": "fa-face-laugh",
     "desc": "Random joke generator",
-    "live": "/other-projects/joke/TellMeJoke.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/joke"
+    "live": "/projects/js/joke/TellMeJoke.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/joke"
   },
   {
     "title": "Myntra Bag",
     "icon": "fa-bag-shopping",
     "desc": "Shopping bag interface",
-    "live": "/other-projects/Myntra-bag/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/Myntra-bag"
+    "live": "/projects/js/myntra-bag/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Myntra-bag"
   },
   {
     "title": "Snake Water Gun",
     "icon": "fa-gamepad",
     "desc": "Classic hand game",
-    "live": "/other-projects/Snake-water-gun/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/Snake-water-gun"
+    "live": "/projects/js/snake-water-gun/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Snake-water-gun"
   },
   {
     "title": "Pie in the Sky Bakery",
     "icon": "fa-bread-slice",
     "desc": "Bakery website UI",
-    "live": "/other-projects/bakery-website/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/bakery-website"
+    "live": "/projects/js/bakery-website/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/bakery-website"
   },
   {
     "title": "Demo Website",
     "icon": "fa-compass-drafting",
     "desc": "Multi-page demo site",
-    "live": "/other-projects/demo/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/demo"
+    "live": "/projects/js/demo/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/demo"
   },
   {
     "title": "Email & Password Validator",
     "icon": "fa-user-shield",
     "desc": "Email & password validator",
-    "live": "/other-projects/Email_Password_Validator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/Email_Password_Validator"
+    "live": "/projects/js/email-password-validator/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Email_Password_Validator"
   },
   {
     "title": "Realtime Search Filter",
     "icon": "fa-magnifying-glass",
     "desc": "Search & filter users in real-time",
-    "live": "/other-projects/realtime-search-filter/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/realtime-search-filter"
+    "live": "/projects/js/realtime-search-filter/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/realtime-search-filter"
   },
   {
     "title": "CallStack",
     "icon": "fa-phone",
     "desc": "Manage call notes with a stacked card interface",
-    "live": "/other-projects/call-app/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/call-app"
+    "live": "/projects/js/call-app/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/call-app"
   },
   {
     "title": "User Manager",
     "icon": "fa-users",
     "desc": "Manage user profiles and details with dark mode",
-    "live": "/other-projects/user-manager/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/user-manager"
+    "live": "/projects/js/user-manager/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/user-manager"
   },
   {
     "title": "User Card",
     "icon": "fa-id-card",
     "desc": "Fetch and display random user cards from API",
-    "live": "/other-projects/User-card/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/User-card"
+    "live": "/projects/js/user-card/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/User-card"
   },
   {
     "title": "Form Submit",
     "icon": "fa-paper-plane",
     "desc": "Signup form with JS validation",
-    "live": "/other-projects/form-submit/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/form-submit"
+    "live": "/projects/js/form-submit/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/form-submit"
   }
 ]

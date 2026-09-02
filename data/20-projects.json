@@ -3,140 +3,140 @@
     "title": "Key Code",
     "icon": "fa-keyboard",
     "desc": "Display keyboard codes",
-    "live": "/20-basic-project/1-Key-Code/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/1-Key-Code"
+    "live": "/projects/beginner/1-Key-Code/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/1-Key-Code"
   },
   {
     "title": "Drop Animation",
     "icon": "fa-water",
     "desc": "Water drop animation effect",
-    "live": "/20-basic-project/2-Drop-Animation/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/2-Drop-Animation"
+    "live": "/projects/beginner/2-Drop-Animation/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/2-Drop-Animation"
   },
   {
     "title": "Name Tag Sticker",
     "icon": "fa-id-badge",
     "desc": "Generate name tags",
-    "live": "/20-basic-project/3-Name-Tag-Sticker/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/3-Name-Tag-Sticker"
+    "live": "/projects/beginner/3-Name-Tag-Sticker/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/3-Name-Tag-Sticker"
   },
   {
     "title": "Coin Flip",
     "icon": "fa-coins",
     "desc": "Flip a coin game",
-    "live": "/20-basic-project/4-Coin-Flip-Application/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/4-Coin-Flip-Application"
+    "live": "/projects/beginner/4-Coin-Flip-Application/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/4-Coin-Flip-Application"
   },
   {
     "title": "Smoke Effect",
     "icon": "fa-smog",
     "desc": "Smoke animation effect",
-    "live": "/20-basic-project/5-Smoke-Effect/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/5-Smoke-Effect"
+    "live": "/projects/beginner/5-Smoke-Effect/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/5-Smoke-Effect"
   },
   {
     "title": "Timeline",
     "icon": "fa-timeline",
     "desc": "Vertical timeline layout",
-    "live": "/20-basic-project/6-Timeline-Project/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/6-Timeline-Project"
+    "live": "/projects/beginner/6-Timeline-Project/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/6-Timeline-Project"
   },
   {
     "title": "Drag & Drop",
     "icon": "fa-hand-pointer",
     "desc": "Drag and drop elements",
-    "live": "/20-basic-project/7-Drag-and-Drop/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/7-Drag-and-Drop"
+    "live": "/projects/beginner/7-Drag-and-Drop/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/7-Drag-and-Drop"
   },
   {
     "title": "Temperature Converter",
     "icon": "fa-temperature-half",
     "desc": "Convert temperature units",
-    "live": "/20-basic-project/8-Temperature-Converter/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/8-Temperature-Converter"
+    "live": "/projects/beginner/8-Temperature-Converter/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/8-Temperature-Converter"
   },
   {
     "title": "Visible Letters",
     "icon": "fa-eye",
     "desc": "Click to reveal letters",
-    "live": "/20-basic-project/9-Click-to-Visible-Letters/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/9-Click-to-Visible-Letters"
+    "live": "/projects/beginner/9-Click-to-Visible-Letters/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/9-Click-to-Visible-Letters"
   },
   {
     "title": "Copy Clipboard",
     "icon": "fa-copy",
     "desc": "Copy text to clipboard",
-    "live": "/20-basic-project/10-Click-to-Copy-Clipboard/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/10-Click-to-Copy-Clipboard"
+    "live": "/projects/beginner/10-Click-to-Copy-Clipboard/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/10-Click-to-Copy-Clipboard"
   },
   {
     "title": "BG Slider",
     "icon": "fa-sliders",
     "desc": "Change background color",
-    "live": "/20-basic-project/11-Slider-to-Change-BG-Color/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/11-Slider-to-Change-BG-Color"
+    "live": "/projects/beginner/11-Slider-to-Change-BG-Color/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/11-Slider-to-Change-BG-Color"
   },
   {
     "title": "Shape Animation",
     "icon": "fa-shapes",
     "desc": "Animated CSS shapes",
-    "live": "/20-basic-project/12-Shape-animation-project/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/12-Shape-animation-project"
+    "live": "/projects/beginner/12-Shape-animation-project/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/12-Shape-animation-project"
   },
   {
     "title": "Testimonial",
     "icon": "fa-comments",
     "desc": "Customer testimonial slider",
-    "live": "/20-basic-project/13-Testimonial-Application/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/13-Testimonial-Application"
+    "live": "/projects/beginner/13-Testimonial-Application/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/13-Testimonial-Application"
   },
   {
     "title": "Icon Hover",
     "icon": "fa-icons",
     "desc": "Icon hover effects",
-    "live": "/20-basic-project/14-Icon-Hover-Effect/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/14-Icon-Hover-Effect"
+    "live": "/projects/beginner/14-Icon-Hover-Effect/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/14-Icon-Hover-Effect"
   },
   {
     "title": "Navbar",
     "icon": "fa-bars",
     "desc": "Responsive navigation bar",
-    "live": "/20-basic-project/15-Navbar-Project/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/15-Navbar-Project"
+    "live": "/projects/beginner/15-Navbar-Project/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/15-Navbar-Project"
   },
   {
     "title": "Cash Calculator",
     "icon": "fa-cash-register",
     "desc": "Calculate cash amounts",
-    "live": "/20-basic-project/16-Cash-Calculator-Application/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/16-Cash-Calculator-Application"
+    "live": "/projects/beginner/16-Cash-Calculator-Application/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/16-Cash-Calculator-Application"
   },
   {
     "title": "Poll System",
     "icon": "fa-square-poll-horizontal",
     "desc": "Interactive polling system",
-    "live": "/20-basic-project/17-Poll-System-Application/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/17-Poll-System-Application"
+    "live": "/projects/beginner/17-Poll-System-Application/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/17-Poll-System-Application"
   },
   {
     "title": "Password Generator",
     "icon": "fa-lock",
     "desc": "Generate secure passwords",
-    "live": "/20-basic-project/18-Random-password-Generator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/18-Random-password-Generator"
+    "live": "/projects/beginner/18-Random-password-Generator/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/18-Random-password-Generator"
   },
   {
     "title": "Stopwatch",
     "icon": "fa-stopwatch",
     "desc": "Digital stopwatch timer",
-    "live": "/20-basic-project/19-Stopwatch-Timer-Application/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/19-Stopwatch-Timer-Application"
+    "live": "/projects/beginner/19-Stopwatch-Timer-Application/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/19-Stopwatch-Timer-Application"
   },
   {
     "title": "Vowel Counter",
     "icon": "fa-font",
     "desc": "Count vowels in text",
-    "live": "/20-basic-project/20-Project-Vowel-Counter/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/20-basic-project/20-Project-Vowel-Counter"
+    "live": "/projects/beginner/20-Project-Vowel-Counter/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/beginner/20-Project-Vowel-Counter"
   }
 ]

@@ -3,70 +3,70 @@
     "title": "Age Calculator",
     "icon": "fa-calculator",
     "desc": "Calculate age from birthdate",
-    "live": "/10-project/Age-Calculator/index.html",
+    "live": "/projects/mini/Age-Calculator/index.html",
     "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project"
   },
   {
     "title": "BMI Calculator",
     "icon": "fa-weight-scale",
     "desc": "Body Mass Index calculator",
-    "live": "/10-project/BMI-Calculator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project/BMI-Calculator"
+    "live": "/projects/mini/BMI-Calculator/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini/BMI-Calculator"
   },
   {
     "title": "Counter App",
     "icon": "fa-plus-minus",
     "desc": "Simple increment counter",
-    "live": "/10-project/Counter-Application/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project/Counter-Application"
+    "live": "/projects/mini/Counter-Application/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini/Counter-Application"
   },
   {
     "title": "Loan Calculator",
     "icon": "fa-hand-holding-dollar",
     "desc": "EMI & loan calculator",
-    "live": "/10-project/Loan-Calculator/index.html",
+    "live": "/projects/mini/Loan-Calculator/index.html",
     "code": "https://github.com/debug-node/Loan-Calculator/tree/b061354422cbfc8d162139a9ca1291ec2d6b78ff"
   },
   {
     "title": "Love Calculator",
     "icon": "fa-heart",
     "desc": "Check love compatibility",
-    "live": "/10-project/Love-Calculator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project/Love-Calculator"
+    "live": "/projects/mini/Love-Calculator/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini/Love-Calculator"
   },
   {
     "title": "Palindrome Checker",
     "icon": "fa-spell-check",
     "desc": "Check palindrome words",
-    "live": "/10-project/Palindrome-Checker/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project/Palindrome-Checker"
+    "live": "/projects/mini/Palindrome-Checker/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini/Palindrome-Checker"
   },
   {
     "title": "RGB Generator",
     "icon": "fa-palette",
     "desc": "Random color generator",
-    "live": "/10-project/RGB-Color-Generator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project/RGB-Color-Generator"
+    "live": "/projects/mini/RGB-Color-Generator/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini/RGB-Color-Generator"
   },
   {
     "title": "Time & Date",
     "icon": "fa-clock",
     "desc": "Live time and date widget",
-    "live": "/10-project/Time-and-Date-Widget/index.html",
+    "live": "/projects/mini/Time-and-Date-Widget/index.html",
     "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project"
   },
   {
     "title": "Tip Calculator",
     "icon": "fa-receipt",
     "desc": "Calculate tips easily",
-    "live": "/10-project/Tip-Calculator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project/Tip-Calculator"
+    "live": "/projects/mini/Tip-Calculator/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini/Tip-Calculator"
   },
   {
     "title": "Unicode Character",
     "icon": "fa-code",
     "desc": "Unicode character finder",
-    "live": "/10-project/Unicode-Character/index.html",
+    "live": "/projects/mini/Unicode-Character/index.html",
     "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project"
   }
 ]
