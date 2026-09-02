@@ -4,7 +4,7 @@
     "icon": "fa-calculator",
     "desc": "Calculate age from birthdate",
     "live": "/projects/mini/Age-Calculator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini"
   },
   {
     "title": "BMI Calculator",
@@ -53,7 +53,7 @@
     "icon": "fa-clock",
     "desc": "Live time and date widget",
     "live": "/projects/mini/Time-and-Date-Widget/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini"
   },
   {
     "title": "Tip Calculator",
@@ -67,6 +67,6 @@
     "icon": "fa-code",
     "desc": "Unicode character finder",
     "live": "/projects/mini/Unicode-Character/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/10-project"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/mini"
   }
 ]

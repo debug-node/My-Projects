@@ -18,7 +18,7 @@
     "icon": "fa-solid fa-baseball-bat-ball",
     "desc": "Simple cricket game",
     "live": "/projects/js/cricket-game/cricket.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Cricket-Game"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/cricket-game"
   },
   {
     "title": "Dynamic Website",
@@ -39,7 +39,7 @@
     "icon": "fa-question",
     "desc": "Number guessing game",
     "live": "/projects/js/guess-number/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Guess-number"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/guess-number"
   },
   {
     "title": "Hacking Terminal",
@@ -74,14 +74,14 @@
     "icon": "fa-bag-shopping",
     "desc": "Shopping bag interface",
     "live": "/projects/js/myntra-bag/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Myntra-bag"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/myntra-bag"
   },
   {
     "title": "Snake Water Gun",
     "icon": "fa-gamepad",
     "desc": "Classic hand game",
     "live": "/projects/js/snake-water-gun/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Snake-water-gun"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/snake-water-gun"
   },
   {
     "title": "Pie in the Sky Bakery",
@@ -102,7 +102,7 @@
     "icon": "fa-user-shield",
     "desc": "Email & password validator",
     "live": "/projects/js/email-password-validator/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/Email_Password_Validator"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/email-password-validator"
   },
   {
     "title": "Realtime Search Filter",
@@ -130,7 +130,7 @@
     "icon": "fa-id-card",
     "desc": "Fetch and display random user cards from API",
     "live": "/projects/js/user-card/index.html",
-    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/User-card"
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/projects/js/user-card"
   },
   {
     "title": "Form Submit",
