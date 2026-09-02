@@ -124,5 +124,19 @@
     "desc": "Manage user profiles and details with dark mode",
     "live": "/other-projects/user-manager/index.html",
     "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/user-manager"
+  },
+  {
+    "title": "User Card",
+    "icon": "fa-id-card",
+    "desc": "Fetch and display random user cards from API",
+    "live": "/other-projects/User-card/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/User-card"
+  },
+  {
+    "title": "Form Submit",
+    "icon": "fa-paper-plane",
+    "desc": "Signup form with JS validation",
+    "live": "/other-projects/form-submit/index.html",
+    "code": "https://github.com/debug-node/ProjectVerse/tree/main/other-projects/form-submit"
   }
 ]
